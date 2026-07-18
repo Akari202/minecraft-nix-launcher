@@ -5,7 +5,7 @@ from logging import debug, error, info, warning
 
 
 class DiskDict(dict):
-    def __init__(self, filename="cache.json"):
+    def __init__(self, filename: str = "cache.json"):
         self.filename = filename
         if os.path.exists(self.filename):
             try:
