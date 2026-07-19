@@ -5,7 +5,7 @@ import re
 import urllib.request
 from dataclasses import dataclass, field
 from logging import debug, error, info, warning
-from typing import Any, Callable, Dict, Optional, Set, TypeVar
+from typing import Any, Callable, Dict, Optional, Set, TypeVar, Union
 
 from disk_dict import DiskDict
 from output_file import OutputFile
@@ -30,12 +30,21 @@ def format_name(name: str) -> str:
     return f"Minecraft-{name.replace(".", "-").replace(" ", "_")}"
 
 
+def value_or_squish(
+    data: Union[list[str], tuple[str], str], separator: str = " "
+) -> str:
+    if isinstance(data, (list, tuple)):
+        return separator.join(data)
+    else:
+        return data
+
+
 def extract_field(
-    data: Dict[str, Any], key: str, builder: Callable[[Any], T]
+    data: Dict[str, Any], key: str, builder: Callable[[Any], T], default: Any = None
 ) -> Optional[T]:
     inner = data.get(key)
     if inner is None:
-        return None
+        return default
     return builder(inner)
 
 

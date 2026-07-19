@@ -4,6 +4,7 @@ import json
 import re
 import urllib.request
 from dataclasses import dataclass, field
+from pprint import pprint
 from typing import Any, Dict, Iterator, Optional, Self, Set, Union
 from util import *
 from enum import StrEnum
@@ -38,6 +39,9 @@ class Target(StrEnum):
             "natives_linux": cls.LINUX_X86,
             "natives_osx": cls.MAC_X86,
             "natives_macos": cls.MAC_X86,
+            "linux": cls.LINUX_X86,
+            "osx": cls.MAC_X86,
+            "windows": cls.WINDOWS_X86,
             "natives_windows": cls.WINDOWS_X86,
             "windows_x86_64": cls.WINDOWS_X86,
         }
@@ -57,21 +61,39 @@ valid_nix_targets = [
 ]
 
 
+def match_mojang_rule_to_targets(rule: dict) -> list[Target]:
+    os_rules = rule.get("os", {})
+    os_name = os_rules.get("name")
+    os_arch = os_rules.get("arch")
+
+    matched = set(valid_nix_targets)
+
+    if os_name == "osx":
+        matched = {t for t in matched if "darwin" in t.value}
+    elif os_name == "linux":
+        matched = {t for t in matched if "linux" in t.value}
+    elif os_name == "windows":
+        matched = {t for t in matched if "windows" in t.value}
+
+    if os_arch == "x86":
+        matched = {t for t in matched if "x86_64" in t.value}
+    elif os_arch == "arm":
+        matched = {t for t in matched if "aarch64" in t.value}
+
+    return list(matched)
+
+
 @dataclass
 class Source:
     url: str
     sha: str
-    target: Target
+    target: Target = Target.ALL
     path: Optional[str] = None
 
     def __str__(self) -> str:
-        systems = (
-            ""
-            if self.target == Target.ALL
-            else f"systems = [ {" ".join(f'"{t}"' for t in self.target)} ];"
-        )
+        system = "" if self.target == Target.ALL else f'system =  "{self.target}";'
         path = "" if self.path is None else f'path = "{self.path}";'
-        return f'{{ url = "{self.url}"; sha256 = "{self.sha}"; {systems} {path} }}'
+        return f'{{ url = "{self.url}"; sha256 = "{self.sha}"; {system} {path} }}'
 
     def __hash__(self) -> int:
         return hash(self.sha)
@@ -98,6 +120,16 @@ class Source:
 
 
 @dataclass
+class JvmArg:
+    value: str
+    target: Target = Target.ALL
+
+    def __str__(self) -> str:
+        system = "" if self.target == Target.ALL else f'system =  "{self.target}";'
+        return f'{{ value = "{self.value}"; {system} }}'
+
+
+@dataclass
 class Logging:
     args: str
     config: Source
@@ -115,14 +147,19 @@ class MinecraftVersion:
     clientMainClass: str
     logging: Optional[Logging]
     libraries: set[Source]
+    jvmArgs: list[JvmArg]
 
     def __str__(self) -> str:
         return f'''{format_name(self.name)} = {{
   client = {self.client};
+  version = "{self.name}";
   server = {optional_to_nix(self.server)};
   javaVersion = {optional_to_nix(self.javaVersion)};
   clientMainClass = "{self.clientMainClass}";
   logging = {optional_to_nix(self.logging)};
+  jvmArgs = [
+    {"\n    ".join(str(arg) for arg in self.jvmArgs)}
+  ];
   libraries = [
     {"\n    ".join(str(lib) for lib in self.libraries)}
   ];
@@ -131,17 +168,30 @@ class MinecraftVersion:
     @classmethod
     def from_url(cls, url: str) -> Self:
         def get_library_sources(data: Dict[str, Any]) -> Iterator[Source]:
-            if "artifact" in data:
+            downloads = data["downloads"]
+            if "artifact" in downloads:
                 yield Source.from_url(
-                    data["artifact"]["url"], path=data["artifact"]["path"]
+                    downloads["artifact"]["url"], path=downloads["artifact"]["path"]
                 )
 
-            elif "classifiers" in data:
-                for i, j in data["classifiers"].items():
+            elif "classifiers" in downloads:
+                for i, j in downloads["classifiers"].items():
                     yield Source.from_url(j["url"], target=Target(i), path=j["path"])
 
             else:
                 error(f"Unknown library data format: {data}")
+
+        def get_jvm_args(data: Union[Dict[str, Any], str]) -> Iterator[JvmArg]:
+            if isinstance(data, str):
+                yield JvmArg(value=data.replace("$", "\\$"))
+            else:
+                for i in data["rules"]:
+                    assert i["action"] == "allow"
+                    for j in match_mojang_rule_to_targets(i):
+                        yield JvmArg(
+                            value=value_or_squish(data["value"]).replace("$", "\\$"),
+                            target=j,
+                        )
 
         data = fetch_json_url(url)
         return cls(
@@ -156,7 +206,7 @@ class MinecraftVersion:
                 data,
                 "logging",
                 lambda i: Logging(
-                    args=i["client"]["argument"].replace("${path}", "\\${path}"),
+                    args=i["client"]["argument"].replace("$", "\\$"),
                     config=Source.from_url(i["client"]["file"]["url"]),
                 ),
             ),
@@ -164,9 +214,20 @@ class MinecraftVersion:
                 [
                     j
                     for i in data["libraries"]
-                    for j in get_library_sources(i["downloads"])
+                    for j in get_library_sources(i)
                     if j.target in valid_nix_targets or j.target == Target.ALL
                 ]
+            ),
+            jvmArgs=extract_field(
+                data,
+                "arguments",
+                lambda i: [
+                    k
+                    for j in i["jvm"]
+                    for k in get_jvm_args(j)
+                    if k.target in valid_nix_targets or k.target == Target.ALL
+                ],
+                default=[],
             ),
         )
 
