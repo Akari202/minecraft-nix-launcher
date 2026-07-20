@@ -1,3 +1,7 @@
 *.log
+logs/
+versions-new.nix
+asset-versions-new.nix
+asset_index_cache.json
 json_cache.json
 __pycache__

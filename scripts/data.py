@@ -139,6 +139,48 @@ class Logging:
 
 
 @dataclass
+class AssetItem:
+    name: str
+    source: Source
+
+    def __str__(self) -> str:
+        return f'{{ name = "{self.name}"; source = {self.source}; }}'
+
+
+@dataclass
+class AssetIndex:
+    name: str
+    index: Source
+    objects: list[AssetItem]
+
+    def __str__(self) -> str:
+        return f'''"{self.name}" = {{
+    indexFile = {self.index};
+    objects = [
+      {"\n    ".join(str(obj) for obj in self.objects)}
+    ];
+  }};'''
+
+    @classmethod
+    def from_url(cls, name: str, url: str) -> Self:
+        data = fetch_json_url(url)
+        return cls(
+            name=name,
+            index=Source.from_url(url, path=f"assets/indexes/{name}.json"),
+            objects=[
+                AssetItem(
+                    name=i,
+                    source=Source.from_url(
+                        f"https://resources.download.minecraft.net/{j["hash"][:2]}/{j["hash"]}",
+                        path=f"assets/objects/{j["hash"][:2]}/{j["hash"]}",
+                    ),
+                )
+                for i, j in data["objects"].items()
+            ],
+        )
+
+
+@dataclass
 class MinecraftVersion:
     name: str
     client: Source
@@ -146,8 +188,9 @@ class MinecraftVersion:
     javaVersion: Optional[int]
     clientMainClass: str
     logging: Optional[Logging]
-    libraries: set[Source]
     jvmArgs: list[JvmArg]
+    libraries: set[Source]
+    assetIndex: str
 
     def __str__(self) -> str:
         return f'''{format_name(self.name)} = {{
@@ -163,6 +206,7 @@ class MinecraftVersion:
   libraries = [
     {"\n    ".join(str(lib) for lib in self.libraries)}
   ];
+  assetIndex = "{self.assetIndex}";
 }};'''
 
     @classmethod
@@ -194,6 +238,7 @@ class MinecraftVersion:
                         )
 
         data = fetch_json_url(url)
+        asset_index_cache[data["assets"]] = data["assetIndex"]["url"]
         return cls(
             name=data["id"],
             client=Source.from_url(data["downloads"]["client"]["url"]),
@@ -210,14 +255,6 @@ class MinecraftVersion:
                     config=Source.from_url(i["client"]["file"]["url"]),
                 ),
             ),
-            libraries=set(
-                [
-                    j
-                    for i in data["libraries"]
-                    for j in get_library_sources(i)
-                    if j.target in valid_nix_targets or j.target == Target.ALL
-                ]
-            ),
             jvmArgs=extract_field(
                 data,
                 "arguments",
@@ -229,6 +266,15 @@ class MinecraftVersion:
                 ],
                 default=[],
             ),
+            libraries=set(
+                [
+                    j
+                    for i in data["libraries"]
+                    for j in get_library_sources(i)
+                    if j.target in valid_nix_targets or j.target == Target.ALL
+                ]
+            ),
+            assetIndex=data["assets"],
         )
 
 
@@ -250,6 +296,22 @@ class Minecraft:
         return f'''{{
   latest = {self.latest};
   versions = {{
-    {"\n  ".join(str(v) for v in self.versions)}
+    {"\n  ".join(str(ver) for ver in self.versions)}
   }};
 }}'''
+
+    @classmethod
+    def from_url(cls, url: str) -> Self:
+        data = fetch_json_url(url)
+        return cls(
+            latest=LatestVersion(
+                release=data["latest"]["release"],
+                snapshot=data["latest"]["snapshot"],
+            ),
+            versions=[
+                MinecraftVersion.from_url(
+                    i["url"],
+                )
+                for i in data["versions"]
+            ],
+        )

@@ -12,6 +12,7 @@ from output_file import OutputFile
 
 sha_cache = DiskDict(filename="./scripts/sha_cache.json")
 json_cache = DiskDict(filename="./scripts/json_cache.json")
+asset_index_cache = {}
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
 }
@@ -57,6 +58,7 @@ def fetch_json_url(url: str) -> str:
     debug(f"Getting json for {url}")
     json_data = json_cache.get(url)
     if json_data is None:
+        info(f"Fetching fresh json from {url}")
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req) as response:
             json_data = json.loads(response.read().decode("utf-8").strip())
@@ -79,7 +81,7 @@ def format_sha(sha: str) -> str:
 
 
 def try_sidecar_url(url: str) -> Optional[str]:
-    if "piston-data" in url or "libraries.minecraft.net" in url:
+    if "piston-data" in url or "minecraft.net" in url:
         return None
     debug(f"Testing sidecar file at {url}.sha256")
     sidecar_url = f"{url}.sha256"
