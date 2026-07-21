@@ -9,14 +9,22 @@
     self,
     nixpkgs,
   }: let
-    selectedVersion = "Minecraft-1-21-11";
+    minecraftVersion = "Minecraft-1-21-11";
+    fabricLoaderVersion = "Fabric-Loader-";
     configName = "testing";
     launchConfig = {
-      ramMin = "4G";
-      ramMax = "8G";
+      ramMin = "2G";
+      ramMax = "6G";
       javaArgs = "-XX:+UseZGC -XX:+ZUncommit -XX:ZUncommitDelay=300 -XX:+UseStringDeduplication -XX:+UseNUMA -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
-      # javaArgs = "-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
       username = "Player";
+
+      serverProperties = {
+        motd = "Testing, launched with Nix!";
+      };
+
+      serverLists = {
+        ops = ["Player"];
+      };
     };
 
     systems = [
@@ -35,6 +43,11 @@
         program = "${self.packages.${system}.default}/bin/minecraft";
       };
 
+      minecraft-server = {
+        type = "app";
+        program = "${self.packages.${system}.minecraft-server}/bin/minecraft-server";
+      };
+
       generate-versions = {
         type = "app";
         program = "${self.packages.${system}.generate-versions}/bin/generate-versions";
@@ -43,8 +56,8 @@
 
     packages = forAllSystems (
       system:
-        import ./pkgs/builder.nix {
-          inherit nixpkgs system selectedVersion configName launchConfig;
+        import ./modules/builder.nix {
+          inherit nixpkgs system minecraftVersion configName launchConfig;
         }
     );
   };

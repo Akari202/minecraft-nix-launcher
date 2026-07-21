@@ -1,46 +1,53 @@
 {
   nixpkgs,
   system,
-  selectedVersion,
+  minecraftVersion,
   configName,
   launchConfig,
 }: let
   pkgs = nixpkgs.legacyPackages.${system};
-  versions = import ./versions.nix;
-  versionData = versions.versions.${selectedVersion};
+  versions = import ../pkgs/versions.nix;
+  versionData = versions.versions.${minecraftVersion};
 
   assetIndex = pkgs.fetchurl {
     url = versionData.assetIndex.url;
     sha256 = versionData.assetIndex.sha256;
   };
 
-  activeJvmArgs =
-    builtins.filter (
-      arg:
-        if !(arg ? system)
-        then true
-        else arg.system == system
-    )
-    versionData.jvmArgs;
-  rawJvmStrings = map (arg: arg.value) activeJvmArgs;
-  parsedJvmArgs =
-    map (
-      arg: let
-        subbed1 = nixpkgs.lib.strings.replaceStrings ["\${natives_directory}"] ["\"$GAME_DIR/natives\""] arg;
-        subbed2 = nixpkgs.lib.strings.replaceStrings ["\${launcher_name}"] ["nix-launcher"] subbed1;
-        subbed3 = nixpkgs.lib.strings.replaceStrings ["\${launcher_version}"] ["1.0"] subbed2;
-      in
-        nixpkgs.lib.strings.replaceStrings ["\${classpath}"] [""] subbed3
-    )
-    rawJvmStrings;
-  cleanJvmArgs = builtins.filter (x: x != "" && x != "-cp") parsedJvmArgs;
-  jvmArgsString = nixpkgs.lib.strings.concatStringsSep " " cleanJvmArgs;
+  serverPropertiesFile = import ./server-properties.nix {
+    inherit pkgs nixpkgs;
+    userProperties = launchConfig.serverProperties or {};
+  };
+
+  serverLists = import ./server-lists.nix {
+    inherit pkgs;
+    userLists = launchConfig.serverLists or {};
+  };
+
+  serverIcon =
+    if (launchConfig ? serverIconUrl && launchConfig ? serverIconSha256)
+    then
+      pkgs.fetchurl {
+        url = launchConfig.serverIconUrl;
+        sha256 = launchConfig.serverIconSha256;
+      }
+    else null;
+
+  jvmArgsString = import ./jvm-args.nix {
+    inherit system nixpkgs;
+    jvmArgs = versionData.jvmArgs;
+  };
 
   javaRuntime = pkgs."jdk${toString versionData.javaVersion}";
 
   vanillaClient = pkgs.fetchurl {
     url = versionData.client.url;
     sha256 = versionData.client.sha256;
+  };
+
+  vanillaServer = pkgs.fetchurl {
+    url = versionData.server.url;
+    sha256 = versionData.server.sha256;
   };
 
   vanillaLibraries =
@@ -54,6 +61,12 @@
     )
     versionData.libraries;
 
+  allLibraries =
+    vanillaLibraries
+    ++ [
+      vanillaClient
+    ];
+
   rawLoggingConfig = pkgs.fetchurl {
     url = versionData.logging.config.url;
     sha256 = versionData.logging.config.sha256;
@@ -65,11 +78,6 @@
   '';
   loggingArgs = nixpkgs.lib.strings.replaceStrings ["\${path}"] ["${loggingConfig}"] versionData.logging.args;
 
-  allLibraries =
-    vanillaLibraries
-    ++ [
-      vanillaClient
-    ];
   classpath = nixpkgs.lib.strings.concatStringsSep ":" allLibraries;
 
   pythonEnv = pkgs.python3.withPackages (ps: [
@@ -80,6 +88,7 @@ in {
     name = "minecraft";
 
     runtimeInputs = [
+      javaRuntime
       pkgs.python3
       (pkgs.python3.withPackages (ps: [
         ps.aiohttp
@@ -111,8 +120,7 @@ in {
 
       echo "Username: ${launchConfig.username}"
       echo "Instance: ${configName}"
-      echo "Launching Minecraft: ${selectedVersion}"
-      echo "Instance: ${configName}"
+      echo "Launching Minecraft: ${minecraftVersion}"
       echo "Game Directory: $GAME_DIR"
       echo "Java Version: ${javaRuntime.version}"
       echo "Memory: ${launchConfig.ramMin} - ${launchConfig.ramMax}"
@@ -135,6 +143,51 @@ in {
         --assetIndex "$ASSET_ID" \
         --uuid "00000000-0000-0000-0000-000000000000" \
         --accessToken "0" \
+        "$@"
+    '';
+  };
+
+  minecraft-server = pkgs.writeShellApplication {
+    name = "minecraft-server";
+    runtimeInputs = [javaRuntime];
+    text = ''
+      SERVER_DIR="''${SERVER_DIR:-$HOME/.minecraft-nix-servers/${configName}}"
+      mkdir -p "$SERVER_DIR"
+      cd "$SERVER_DIR"
+
+      cp -f "${serverPropertiesFile}" server.properties
+      cp -f "${serverLists.opsFile}" ops.json
+      cp -f "${serverLists.whitelistFile}" whitelist.json
+      cp -f "${serverLists.bannedPlayersFile}" banned-players.json
+      cp -f "${serverLists.bannedIpsFile}" banned-ips.json
+      chmod 644 ops.json whitelist.json banned-players.json banned-ips.json server.properties
+      ${
+        if serverIcon != null
+        then ''
+          cp -f "${serverIcon}" server-icon.png
+          chmod 644 server-icon.png
+        ''
+        else ""
+      }
+
+      if [ ! -f eula.txt ]; then
+        echo "eula=true" > eula.txt
+        echo "Accepted Mojang EULA in eula.txt"
+      fi
+
+      echo "Instance: ${configName}"
+      echo "Launching Minecraft server: ${minecraftVersion}"
+      echo "Server Directory: $SERVER_DIR"
+      echo "Java Version: ${javaRuntime.version}"
+      echo "Memory: ${launchConfig.ramMin} - ${launchConfig.ramMax}"
+      echo ""
+
+      exec ${javaRuntime}/bin/java \
+        -Xms${launchConfig.ramMin} \
+        -Xmx${launchConfig.ramMax} \
+        ${launchConfig.javaArgs} \
+        -jar "${vanillaServer}" \
+        nogui \
         "$@"
     '';
   };
