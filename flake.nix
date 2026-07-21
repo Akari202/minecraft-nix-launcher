@@ -10,13 +10,16 @@
     nixpkgs,
   }: let
     minecraftVersion = "Minecraft-1-21-11";
-    fabricLoaderVersion = "Fabric-Loader-";
     configName = "testing";
-    launchConfig = {
-      ramMin = "2G";
-      ramMax = "6G";
-      javaArgs = "-XX:+UseZGC -XX:+ZUncommit -XX:ZUncommitDelay=300 -XX:+UseStringDeduplication -XX:+UseNUMA -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
-      username = "Player";
+    gameConfig = {
+      fabricLoaderVersion = "Fabric-0-19-3";
+
+      launchConfig = {
+        ramMin = "2G";
+        ramMax = "6G";
+        javaArgs = "-XX:+UseZGC -XX:+ZUncommit -XX:ZUncommitDelay=300 -XX:+UseStringDeduplication -XX:+UseNUMA -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
+        username = "Player";
+      };
 
       serverProperties = {
         motd = "Testing, launched with Nix!";
@@ -57,7 +60,7 @@
     packages = forAllSystems (
       system:
         import ./modules/builder.nix {
-          inherit nixpkgs system minecraftVersion configName launchConfig;
+          inherit nixpkgs system minecraftVersion configName gameConfig;
         }
     );
   };

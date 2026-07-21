@@ -17,8 +17,11 @@ pkgs.writeShellApplication {
 
     echo "INFO: Formatting Minecraft versions"
     alejandra --quiet ./pkgs/versions-new.nix
+    echo "INFO: Formatting Fabric versions"
+    alejandra --quiet ./pkgs/fabric-versions-new.nix
 
-    echo "INFO: Moving file"
+    echo "INFO: Moving files"
     uutils-mv ./pkgs/versions-new.nix ./pkgs/versions.nix
+    uutils-mv ./pkgs/fabric-versions-new.nix ./pkgs/fabric-versions.nix
   '';
 }

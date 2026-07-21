@@ -3,33 +3,35 @@
   system,
   minecraftVersion,
   configName,
-  launchConfig,
+  gameConfig,
 }: let
   pkgs = nixpkgs.legacyPackages.${system};
   versions = import ../pkgs/versions.nix;
   versionData = versions.versions.${minecraftVersion};
 
-  assetIndex = pkgs.fetchurl {
-    url = versionData.assetIndex.url;
-    sha256 = versionData.assetIndex.sha256;
-  };
+  fabricVersions = import ../pkgs/fabric-versions.nix;
+  isFabric = gameConfig ? fabricLoaderVersion && gameConfig.fabricLoaderVersion != null;
+  fabricLoaderData =
+    if isFabric
+    then fabricVersions.${gameConfig.fabricLoaderVersion}
+    else null;
 
   serverPropertiesFile = import ./server-properties.nix {
     inherit pkgs nixpkgs;
-    userProperties = launchConfig.serverProperties or {};
+    userProperties = gameConfig.serverProperties or {};
   };
 
   serverLists = import ./server-lists.nix {
     inherit pkgs;
-    userLists = launchConfig.serverLists or {};
+    userLists = gameConfig.serverLists or {};
   };
 
   serverIcon =
-    if (launchConfig ? serverIconUrl && launchConfig ? serverIconSha256)
+    if (gameConfig ? serverIconUrl && gameConfig ? serverIconSha256)
     then
       pkgs.fetchurl {
-        url = launchConfig.serverIconUrl;
-        sha256 = launchConfig.serverIconSha256;
+        url = gameConfig.serverIconUrl;
+        sha256 = gameConfig.serverIconSha256;
       }
     else null;
 
@@ -40,32 +42,42 @@
 
   javaRuntime = pkgs."jdk${toString versionData.javaVersion}";
 
-  vanillaClient = pkgs.fetchurl {
-    url = versionData.client.url;
-    sha256 = versionData.client.sha256;
-  };
+  fetchSource = lib:
+    pkgs.fetchurl {
+      url = lib.url;
+      sha256 = lib.sha256;
+      name = builtins.baseNameOf lib.url;
+    };
 
-  vanillaServer = pkgs.fetchurl {
-    url = versionData.server.url;
-    sha256 = versionData.server.sha256;
-  };
+  assetIndex = fetchSource versionData.assetIndex;
 
-  vanillaLibraries =
-    map (
-      lib:
-        pkgs.fetchurl {
-          url = lib.url;
-          sha256 = lib.sha256;
-          name = builtins.baseNameOf lib.url;
-        }
-    )
-    versionData.libraries;
+  sharedLibraries =
+    (map fetchSource versionData.libraries)
+    ++ (
+      if isFabric
+      then
+        (map fetchSource fabricLoaderData.commonLibraries)
+        ++ [(fetchSource fabricLoaderData.loader)]
+      else []
+    );
 
-  allLibraries =
-    vanillaLibraries
-    ++ [
-      vanillaClient
-    ];
+  clientLibraries =
+    sharedLibraries
+    ++ [(fetchSource versionData.client)]
+    ++ (
+      if isFabric
+      then map fetchSource fabricLoaderData.clientLibraries
+      else []
+    );
+
+  serverLibraries =
+    sharedLibraries
+    ++ [(fetchSource versionData.server)]
+    ++ (
+      if isFabric
+      then map fetchSource fabricLoaderData.serverLibraries
+      else []
+    );
 
   rawLoggingConfig = pkgs.fetchurl {
     url = versionData.logging.config.url;
@@ -78,7 +90,8 @@
   '';
   loggingArgs = nixpkgs.lib.strings.replaceStrings ["\${path}"] ["${loggingConfig}"] versionData.logging.args;
 
-  classpath = nixpkgs.lib.strings.concatStringsSep ":" allLibraries;
+  clientClasspath = nixpkgs.lib.strings.concatStringsSep ":" clientLibraries;
+  serverClasspath = nixpkgs.lib.strings.concatStringsSep ":" serverLibraries;
 
   pythonEnv = pkgs.python3.withPackages (ps: [
     ps.aiohttp
@@ -89,23 +102,14 @@ in {
 
     runtimeInputs = [
       javaRuntime
-      pkgs.python3
-      (pkgs.python3.withPackages (ps: [
-        ps.aiohttp
-      ]))
+      pythonEnv
     ];
 
     text = ''
       GAME_DIR="''${GAME_DIR:-$HOME/.minecraft-nix-instances/${configName}}"
-      mkdir -p "$GAME_DIR"
       MODS_DIR="$GAME_DIR/mods"
-      mkdir -p "$MODS_DIR"
       LOGS_DIR="$GAME_DIR/logs"
-      mkdir -p "$LOGS_DIR"
-      mkdir -p "$GAME_DIR/assets"
-      mkdir -p "$GAME_DIR/assets/indexes"
-      mkdir -p "$GAME_DIR/assets/objects"
-
+      mkdir -p "$GAME_DIR" "$MODS_DIR" "$LOGS_DIR" "$GAME_DIR/assets" "$GAME_DIR/assets/indexes" "$GAME_DIR/assets/objects"
 
       ASSET_ID="${versionData.assetIndex.id}"
       INDEX_LINK_PATH="$GAME_DIR/assets/indexes/$ASSET_ID.json"
@@ -114,29 +118,38 @@ in {
       fi
       ln -s "${assetIndex}" "$INDEX_LINK_PATH"
 
-      ${pythonEnv}/bin/python3 "${../scripts/asset_downloader.py}" \
+      python3 "${../scripts/asset_downloader.py}" \
         --index "$INDEX_LINK_PATH" \
         --objects-dir "$GAME_DIR/assets/objects"
 
-      echo "Username: ${launchConfig.username}"
+      echo "Username: ${gameConfig.launchConfig.username}"
       echo "Instance: ${configName}"
       echo "Launching Minecraft: ${minecraftVersion}"
+      ${
+        if isFabric
+        then "echo \"Fabric Loader: ${gameConfig.fabricLoaderVersion}\""
+        else ""
+      }
       echo "Game Directory: $GAME_DIR"
       echo "Java Version: ${javaRuntime.version}"
-      echo "Memory: ${launchConfig.ramMin} - ${launchConfig.ramMax}"
+      echo "Memory: ${gameConfig.launchConfig.ramMin} - ${gameConfig.launchConfig.ramMax}"
       echo ""
 
-      exec ${javaRuntime}/bin/java \
-        -Xms${launchConfig.ramMin} \
-        -Xmx${launchConfig.ramMax} \
-        ${launchConfig.javaArgs} \
+      exec java \
+        -Xms${gameConfig.launchConfig.ramMin} \
+        -Xmx${gameConfig.launchConfig.ramMax} \
+        ${gameConfig.launchConfig.javaArgs} \
         ${jvmArgsString} \
         ${loggingArgs} \
         -Dlog_dir="$LOGS_DIR" \
-        -cp "${classpath}" \
-        ${versionData.clientMainClass} \
+        -cp "${clientClasspath}" \
+        ${
+        if isFabric
+        then fabricLoaderData.clientMainClass
+        else versionData.clientMainClass
+      } \
         --gameDir "$GAME_DIR" \
-        --username "${launchConfig.username}" \
+        --username "${gameConfig.launchConfig.username}" \
         --version "${versionData.version}" \
         --versionType "release" \
         --assetsDir "$GAME_DIR/assets" \
@@ -177,16 +190,26 @@ in {
 
       echo "Instance: ${configName}"
       echo "Launching Minecraft server: ${minecraftVersion}"
+      ${
+        if isFabric
+        then "echo \"Fabric Loader: ${gameConfig.fabricLoaderVersion}\""
+        else ""
+      }
       echo "Server Directory: $SERVER_DIR"
       echo "Java Version: ${javaRuntime.version}"
-      echo "Memory: ${launchConfig.ramMin} - ${launchConfig.ramMax}"
+      echo "Memory: ${gameConfig.launchConfig.ramMin} - ${gameConfig.launchConfig.ramMax}"
       echo ""
 
-      exec ${javaRuntime}/bin/java \
-        -Xms${launchConfig.ramMin} \
-        -Xmx${launchConfig.ramMax} \
-        ${launchConfig.javaArgs} \
-        -jar "${vanillaServer}" \
+      exec java \
+        -Xms${gameConfig.launchConfig.ramMin} \
+        -Xmx${gameConfig.launchConfig.ramMax} \
+        ${gameConfig.launchConfig.javaArgs} \
+        -cp "${serverClasspath}" \
+        ${
+        if isFabric
+        then fabricLoaderData.serverMainClass
+        else "net.minecraft.server.Main"
+      } \
         nogui \
         "$@"
     '';

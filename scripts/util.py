@@ -15,6 +15,9 @@ json_cache = DiskDict(filename="./scripts/cache/json_cache.json")
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
 }
+modrinth_headers = {
+    "User-Agent": "Akari202/minecraft-nix-launcher (akari202@akada.dev)"
+}
 
 T = TypeVar("T")
 
@@ -26,8 +29,12 @@ def optional_to_nix(data: Optional[T]) -> str:
         return str(data)
 
 
-def format_name(name: str) -> str:
+def format_minecraft_name(name: str) -> str:
     return f"Minecraft-{name.replace(".", "-").replace(" ", "_")}"
+
+
+def format_fabric_name(name: str) -> str:
+    return f"Fabric-{name.replace(".", "-").replace(" ", "_").replace("+", "-")}"
 
 
 def value_or_squish(
@@ -130,7 +137,7 @@ def get_sha_from_url(url: str) -> str:
     return sha
 
 
-def maven_to_url(maven_name: str, base_url: str) -> str:
+def maven_to_url(maven_name: str, base_url: str = "https://maven.fabricmc.net/") -> str:
     parts = maven_name.split(":")
     if len(parts) != 3:
         error(f"Malformed maven name {maven_name}")
@@ -139,4 +146,8 @@ def maven_to_url(maven_name: str, base_url: str) -> str:
     group_path = group.replace(".", "/")
     if not base_url.endswith("/"):
         base_url += "/"
-    return f"{base_url}{group_path}/{artifact}/{version}/{artifact}-{version}.jar"
+    return (
+        f"{base_url}{group_path}/{artifact}/{version}/{artifact}-{version}.jar".replace(
+            " ", "%20"
+        )
+    )

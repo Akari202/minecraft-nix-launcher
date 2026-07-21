@@ -21,4 +21,10 @@ minecraft = Minecraft.from_url(
 )
 info("Writing Minecraft versions")
 OutputFile("pkgs/versions-new.nix").write_chunk(str(minecraft))
+
+info("Parsing Fabric manifest")
+fabric = Fabric.from_url("https://meta.fabricmc.net/v2/versions/loader/26.2")
+info("Writing Fabric versions")
+OutputFile("pkgs/fabric-versions-new.nix").write_chunk(str(fabric))
+
 info("Writing caches to disk")

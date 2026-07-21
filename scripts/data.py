@@ -9,6 +9,8 @@ from typing import Any, Dict, Iterator, Optional, Self, Set, Union
 from util import *
 from enum import StrEnum
 
+# from urllib.parse import quote
+
 
 class Target(StrEnum):
     ALL = "all"
@@ -158,22 +160,24 @@ class MinecraftVersion:
     jvmArgs: list[JvmArg]
     libraries: set[Source]
     assetIndex: str
+    fabricIntermediary: Optional[Source]
 
     def __str__(self) -> str:
-        return f'''{format_name(self.name)} = {{
+        return f'''{format_minecraft_name(self.name)} = {{
   client = {self.client};
   version = "{self.name}";
   server = {optional_to_nix(self.server)};
   javaVersion = {optional_to_nix(self.javaVersion)};
   clientMainClass = "{self.clientMainClass}";
   logging = {optional_to_nix(self.logging)};
+  fabricIntermediary = {optional_to_nix(self.fabricIntermediary)};
+  assetIndex = {self.assetIndex};
   jvmArgs = [
     {"\n    ".join(str(arg) for arg in self.jvmArgs)}
   ];
   libraries = [
     {"\n    ".join(str(lib) for lib in self.libraries)}
   ];
-  assetIndex = {self.assetIndex};
 }};'''
 
     @classmethod
@@ -203,6 +207,16 @@ class MinecraftVersion:
                             value=value_or_squish(data["value"]).replace("$", "\\$"),
                             target=j,
                         )
+
+        def get_intermediary(name: str) -> Optional[Source]:
+            data = fetch_json_url(
+                f"https://meta.fabricmc.net/v2/versions/intermediary/{name.replace(" ", "%20")}"
+            )
+            if len(data) == 0:
+                return None
+            else:
+                assert len(data) == 1
+                return Source.from_url(maven_to_url(maven_name=data[0]["maven"]))
 
         data = fetch_json_url(url)
         return cls(
@@ -243,6 +257,7 @@ class MinecraftVersion:
             assetIndex=AssetIndex(
                 name=data["assets"], index=Source.from_url(data["assetIndex"]["url"])
             ),
+            fabricIntermediary=get_intermediary(data["id"]),
         )
 
 
@@ -252,7 +267,7 @@ class LatestVersion:
     snapshot: str
 
     def __str__(self) -> str:
-        return f'{{ release = "{format_name(self.release)}"; snapshot = "{format_name(self.snapshot)}"; }}'
+        return f'{{ release = "{format_minecraft_name(self.release)}"; snapshot = "{format_minecraft_name(self.snapshot)}"; }}'
 
 
 @dataclass
@@ -282,4 +297,89 @@ class Minecraft:
                 )
                 for i in data["versions"]
             ],
+        )
+
+
+@dataclass
+class FabricLoader:
+    name: str
+    loader: Source
+    clientMainClass: str
+    serverMainClass: str
+    clientLibraries: list[Source]
+    serverLibraries: list[Source]
+    commonLibraries: list[Source]
+
+    def __str__(self) -> str:
+        return f'''{format_fabric_name(self.name)} = {{
+  loader = {self.loader};
+  clientMainClass = "{self.clientMainClass}";
+  serverMainClass = "{self.serverMainClass}";
+  clientLibraries = [
+    {"\n    ".join(str(lib) for lib in self.clientLibraries)}
+  ];
+  serverLibraries = [
+    {"\n    ".join(str(lib) for lib in self.serverLibraries)}
+  ];
+  commonLibraries = [
+    {"\n    ".join(str(lib) for lib in self.commonLibraries)}
+  ];
+}};'''
+
+
+@dataclass
+class Fabric:
+    loaders: list[FabricLoader]
+
+    def __str__(self) -> str:
+        return f'''{{
+    {"\n  ".join(str(loa) for loa in self.loaders)}
+}}'''
+
+    @classmethod
+    def from_url(cls, url: str) -> Self:
+        def get_main_class(data: Union[Dict[str, Any], str], side: str) -> str:
+            if isinstance(data, str):
+                return data
+            else:
+                return data[side]
+
+        data = fetch_json_url(url)
+        return cls(
+            loaders=[
+                FabricLoader(
+                    name=i["loader"]["version"],
+                    loader=Source.from_url(maven_to_url(i["loader"]["maven"])),
+                    clientMainClass=get_main_class(
+                        i["launcherMeta"]["mainClass"], "client"
+                    ),
+                    serverMainClass=get_main_class(
+                        i["launcherMeta"]["mainClass"], "server"
+                    ),
+                    clientLibraries=[
+                        Source.from_url(
+                            maven_to_url(maven_name=j["name"], base_url=j["url"])
+                        )
+                        for j in i["launcherMeta"]["libraries"]["client"]
+                    ],
+                    serverLibraries=[
+                        Source.from_url(
+                            maven_to_url(maven_name=j["name"], base_url=j["url"])
+                        )
+                        for j in i["launcherMeta"]["libraries"]["server"]
+                    ],
+                    commonLibraries=[
+                        Source.from_url(
+                            maven_to_url(
+                                maven_name=j["name"],
+                                base_url=j.get(
+                                    "url", "https://libraries.minecraft.net"
+                                ),
+                            )
+                        )
+                        for j in i["launcherMeta"]["libraries"]["common"]
+                    ],
+                )
+                for i in data
+            ]
         )
