@@ -21,15 +21,4 @@ minecraft = Minecraft.from_url(
 )
 info("Writing Minecraft versions")
 OutputFile("pkgs/versions-new.nix").write_chunk(str(minecraft))
-
-info("Parsing asset indexes")
-assets = [AssetIndex.from_url(name=i, url=j) for i, j in asset_index_cache.items()]
-info("Writing asset versions")
-asset_output_file = OutputFile("pkgs/asset-versions-new.nix")
-asset_output_file.write("{")
-for ass in assets:
-    asset_output_file.write("\n  ")
-    asset_output_file.write_chunk(str(ass))
-
-asset_output_file.write_chunk("}")
 info("Writing caches to disk")

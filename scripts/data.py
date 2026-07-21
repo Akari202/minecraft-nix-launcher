@@ -139,45 +139,12 @@ class Logging:
 
 
 @dataclass
-class AssetItem:
-    name: str
-    source: Source
-
-    def __str__(self) -> str:
-        return f'{{ name = "{self.name}"; source = {self.source}; }}'
-
-
-@dataclass
 class AssetIndex:
     name: str
     index: Source
-    objects: list[AssetItem]
 
     def __str__(self) -> str:
-        return f'''"{self.name}" = {{
-    indexFile = {self.index};
-    objects = [
-      {"\n    ".join(str(obj) for obj in self.objects)}
-    ];
-  }};'''
-
-    @classmethod
-    def from_url(cls, name: str, url: str) -> Self:
-        data = fetch_json_url(url)
-        return cls(
-            name=name,
-            index=Source.from_url(url, path=f"assets/indexes/{name}.json"),
-            objects=[
-                AssetItem(
-                    name=i,
-                    source=Source.from_url(
-                        f"https://resources.download.minecraft.net/{j["hash"][:2]}/{j["hash"]}",
-                        path=f"assets/objects/{j["hash"][:2]}/{j["hash"]}",
-                    ),
-                )
-                for i, j in data["objects"].items()
-            ],
-        )
+        return f'{{ id = "{self.name}"; url = "{self.index.url}"; sha256 = "{self.index.sha}"; }}'
 
 
 @dataclass
@@ -206,7 +173,7 @@ class MinecraftVersion:
   libraries = [
     {"\n    ".join(str(lib) for lib in self.libraries)}
   ];
-  assetIndex = "{self.assetIndex}";
+  assetIndex = {self.assetIndex};
 }};'''
 
     @classmethod
@@ -238,7 +205,6 @@ class MinecraftVersion:
                         )
 
         data = fetch_json_url(url)
-        asset_index_cache[data["assets"]] = data["assetIndex"]["url"]
         return cls(
             name=data["id"],
             client=Source.from_url(data["downloads"]["client"]["url"]),
@@ -274,7 +240,9 @@ class MinecraftVersion:
                     if j.target in valid_nix_targets or j.target == Target.ALL
                 ]
             ),
-            assetIndex=data["assets"],
+            assetIndex=AssetIndex(
+                name=data["assets"], index=Source.from_url(data["assetIndex"]["url"])
+            ),
         )
 
 

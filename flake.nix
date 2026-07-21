@@ -14,7 +14,8 @@
     launchConfig = {
       ramMin = "4G";
       ramMax = "8G";
-      javaArgs = "-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
+      javaArgs = "-XX:+UseZGC -XX:+ZUncommit -XX:ZUncommitDelay=300 -XX:+UseStringDeduplication -XX:+UseNUMA -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
+      # javaArgs = "-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
       username = "Player";
     };
 

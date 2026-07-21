@@ -12,7 +12,6 @@ from output_file import OutputFile
 
 sha_cache = DiskDict(filename="./scripts/sha_cache.json")
 json_cache = DiskDict(filename="./scripts/json_cache.json")
-asset_index_cache = {}
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
 }
