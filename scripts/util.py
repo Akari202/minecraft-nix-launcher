@@ -10,8 +10,8 @@ from typing import Any, Callable, Dict, Optional, Set, TypeVar, Union
 from disk_dict import DiskDict
 from output_file import OutputFile
 
-sha_cache = DiskDict(filename="./scripts/sha_cache.json")
-json_cache = DiskDict(filename="./scripts/json_cache.json")
+sha_cache = DiskDict(filename="./scripts/cache/sha_cache.json")
+json_cache = DiskDict(filename="./scripts/cache/json_cache.json")
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
 }

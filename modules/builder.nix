@@ -192,5 +192,5 @@ in {
     '';
   };
 
-  generate-versions = import ../scripts/generate-versions.nix pkgs;
+  generate-versions = import ./generate-versions.nix pkgs;
 }
