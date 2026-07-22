@@ -16,8 +16,8 @@
 
       mods = [
         "sodium"
-        "sodium-extra"
         "lithium"
+        "sodium-extra"
         "malilib"
         "tweakeroo"
         "litematica"
@@ -45,13 +45,13 @@
         "sound-physics-remastered"
         "entityculling"
         "3dskinlayers"
-        # "simple-voice-chat"
       ];
 
       launchConfig = {
         ramMin = "2G";
         ramMax = "6G";
         javaArgs = "-XX:+UseZGC -XX:+ZUncommit -XX:ZUncommitDelay=300 -XX:+UseStringDeduplication -XX:+UseNUMA -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
+        # javaArgs = "-XX:+UseG1GC -XX:+UseStringDeduplication -XX:+UseNUMA -XX:MaxGCPauseMillis=200 -XX:+PerfDisableSharedMem -XX:+AlwaysPreTouch";
         username = "Player";
       };
 

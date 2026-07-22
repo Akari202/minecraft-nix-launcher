@@ -9,9 +9,6 @@ from typing import Any, Dict
 
 import aiohttp
 
-BASE_URL: str = "https://resources.download.minecraft.net"
-SEMAPHORE_LIMIT: int = 20
-
 
 def verify_local_sha1(path: str, expected_sha: str) -> bool:
     if not os.path.exists(path):
@@ -31,7 +28,7 @@ async def download_file(
     sha: str,
     path: str,
 ):
-    url: str = f"{BASE_URL}/{sha[:2]}/{sha}"
+    url: str = f"https://resources.download.minecraft.net/{sha[:2]}/{sha}"
 
     if os.path.exists(path):
         if verify_local_sha1(path, sha):
@@ -90,7 +87,7 @@ async def main():
     objects: Dict[str, Dict[str, Any]] = data.get("objects", {})
     info(f"Found {len(objects)} assets to verify and download")
 
-    semaphore: Dict[str, Dict[str, Any]] = asyncio.Semaphore(SEMAPHORE_LIMIT)
+    semaphore: Dict[str, Dict[str, Any]] = asyncio.Semaphore(20)
     async with aiohttp.ClientSession() as session:
         tasks: list[asyncio.Task[None]] = []
         for i, j in objects.items():

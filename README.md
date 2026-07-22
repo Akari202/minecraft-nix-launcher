@@ -6,3 +6,11 @@ There are several other projects that do the same thing but for reasons ive forg
 ### Launching Minecraft is hard
 
 If i had known what a pita is to launch minecraft i wouldn't have bothered but hey, i figured it out and learned something along the way.
+
+Natives aren't unpacked yet
+
+Status (from minimal testing):
+* 1.21.11 - works!
+* 1.16.4 - Broken, "Failed to locate library: liblwjgl.dylib"
+* 1.18.2 - Broken, "Failed to locate library: liblwjgl.dylib"
+* 1.19.1 - Broken, "Failed to locate library: liblwjgl.dylib"
