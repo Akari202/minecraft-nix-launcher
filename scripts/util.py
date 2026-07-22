@@ -12,12 +12,16 @@ from output_file import OutputFile
 
 sha_cache = DiskDict(filename="./scripts/cache/sha_cache.json")
 json_cache = DiskDict(filename="./scripts/cache/json_cache.json")
+modrinth_json_cache = DiskDict(filename="./scripts/cache/modrinth_json_cache.json")
 headers = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0"
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:10.0) Gecko/20100101 Firefox/10.0 (akari202@akada.dev)"
 }
 modrinth_headers = {
     "User-Agent": "Akari202/minecraft-nix-launcher (akari202@akada.dev)"
 }
+modrinth_query_string = urllib.parse.urlencode(
+    {"loaders": '["fabric"]', "include_changelog": "false"}
+)
 
 T = TypeVar("T")
 
@@ -30,11 +34,11 @@ def optional_to_nix(data: Optional[T]) -> str:
 
 
 def format_minecraft_name(name: str) -> str:
-    return f"Minecraft-{name.replace(".", "-").replace(" ", "_")}"
+    return f"Minecraft {name}"
 
 
 def format_fabric_name(name: str) -> str:
-    return f"Fabric-{name.replace(".", "-").replace(" ", "_").replace("+", "-")}"
+    return f"Fabric {name}"
 
 
 def value_or_squish(
@@ -59,7 +63,7 @@ def upgrade_to_https(url: str) -> str:
     return url.replace("http://", "https://")
 
 
-def fetch_json_url(url: str) -> str:
+def fetch_json_url(url: str) -> Dict[str, Any]:
     url = upgrade_to_https(url)
     debug(f"Getting json for {url}")
     json_data = json_cache.get(url)
@@ -69,6 +73,21 @@ def fetch_json_url(url: str) -> str:
         with urllib.request.urlopen(req) as response:
             json_data = json.loads(response.read().decode("utf-8").strip())
         json_cache[url] = json_data
+    else:
+        debug(f"Using cached json")
+    return json_data
+
+
+def get_fabric_mod_versions(mod_id_or_slug: str) -> Dict[str, Any]:
+    url = f"https://api.modrinth.com/v2/project/{mod_id_or_slug}/version?{modrinth_query_string}"
+    debug(f"Getting json for {url}")
+    json_data = modrinth_json_cache.get(url)
+    if json_data is None:
+        info(f"Fetching fresh json from {url}")
+        req = urllib.request.Request(url, headers=modrinth_headers)
+        with urllib.request.urlopen(req) as response:
+            json_data = json.loads(response.read().decode("utf-8").strip())
+        modrinth_json_cache[url] = json_data
     else:
         debug(f"Using cached json")
     return json_data

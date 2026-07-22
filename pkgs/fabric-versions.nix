@@ -1,5 +1,5 @@
 {
-  Fabric-0-19-3 = {
+  "Fabric 0.19.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.3/fabric-loader-0.19.3.jar";
       sha256 = "sha256-c+7Yw0u60DIKKjy6U0Y1HoIvdPgrPzwGBXQGhHQTKVg=";
@@ -37,7 +37,7 @@
       }
     ];
   };
-  Fabric-0-19-2 = {
+  "Fabric 0.19.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.2/fabric-loader-0.19.2.jar";
       sha256 = "sha256-G5ECWsa1JTpJqrsi9li17tn7um3IjrDkqTZMey0dGGU=";
@@ -75,7 +75,7 @@
       }
     ];
   };
-  Fabric-0-19-1 = {
+  "Fabric 0.19.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.1/fabric-loader-0.19.1.jar";
       sha256 = "sha256-qIfDpnCK/LPhoXSrd0kCdovMMhbSYbC2jS0VN+TbhvM=";
@@ -113,7 +113,7 @@
       }
     ];
   };
-  Fabric-0-19-0 = {
+  "Fabric 0.19.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.19.0/fabric-loader-0.19.0.jar";
       sha256 = "sha256-l6/LRx/d6MykDePz+867RDcRl1Vz75pSvIBjbGUTBdQ=";
@@ -151,7 +151,7 @@
       }
     ];
   };
-  Fabric-0-18-6 = {
+  "Fabric 0.18.6" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.6/fabric-loader-0.18.6.jar";
       sha256 = "sha256-K8FShd3h1bnqPIRE1wY8YBhMfiGIN4XhgPeibpN3LkE=";
@@ -189,7 +189,7 @@
       }
     ];
   };
-  Fabric-0-18-5 = {
+  "Fabric 0.18.5" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.5/fabric-loader-0.18.5.jar";
       sha256 = "sha256-9TelbVi4SwLN5VobLnoVLEXSj1gCiv+BxqcYITJ+JfY=";
@@ -227,7 +227,7 @@
       }
     ];
   };
-  Fabric-0-18-4 = {
+  "Fabric 0.18.4" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.4/fabric-loader-0.18.4.jar";
       sha256 = "sha256-6jALhBlJopBkHbjBN+PaIFRioImnRy2PFlcXn9I7z0o=";
@@ -265,7 +265,7 @@
       }
     ];
   };
-  Fabric-0-18-3 = {
+  "Fabric 0.18.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.3/fabric-loader-0.18.3.jar";
       sha256 = "sha256-BsuA2Z5RkSzS84AsVl1XIiI5sz20SzvFTe6gcD/wA2w=";
@@ -303,7 +303,7 @@
       }
     ];
   };
-  Fabric-0-18-2 = {
+  "Fabric 0.18.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.2/fabric-loader-0.18.2.jar";
       sha256 = "sha256-Orf2sXMhcDlOd8nzH4tZiSj4dmVG+YSUgkMd29IfGs0=";
@@ -341,7 +341,7 @@
       }
     ];
   };
-  Fabric-0-18-1 = {
+  "Fabric 0.18.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.1/fabric-loader-0.18.1.jar";
       sha256 = "sha256-jMsKIHGJPODg2EwaOX0xiwwYXl/AKV0iRhwCsXdD1sU=";
@@ -379,7 +379,7 @@
       }
     ];
   };
-  Fabric-0-18-0 = {
+  "Fabric 0.18.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.0/fabric-loader-0.18.0.jar";
       sha256 = "sha256-7N1bCEoZK3DmpC5SiU8SRbkl+qy8GHVC+7NhsZxIrro=";
@@ -417,7 +417,7 @@
       }
     ];
   };
-  Fabric-0-17-3 = {
+  "Fabric 0.17.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.17.3/fabric-loader-0.17.3.jar";
       sha256 = "sha256-tTyB5dGHZD1IU7KlZ8LrGdh8jvk15PR199SxcKAwHbc=";
@@ -455,7 +455,7 @@
       }
     ];
   };
-  Fabric-0-17-2 = {
+  "Fabric 0.17.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.17.2/fabric-loader-0.17.2.jar";
       sha256 = "sha256-ho3X0jZvC2twA5Xv4eZgbCG7IUfHUHHGq+Fu2fIaom8=";
@@ -493,7 +493,7 @@
       }
     ];
   };
-  Fabric-0-17-1 = {
+  "Fabric 0.17.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.17.1/fabric-loader-0.17.1.jar";
       sha256 = "sha256-Fx4VcC2KucMkqIyacO4V3BXtIPIORfS9/JbI01vR3qo=";
@@ -531,7 +531,7 @@
       }
     ];
   };
-  Fabric-0-17-0 = {
+  "Fabric 0.17.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.17.0/fabric-loader-0.17.0.jar";
       sha256 = "sha256-ba0G4ob6Atk2VNe2kzGIoBE/owyFFAQAmL4KOJ7oNFM=";
@@ -569,7 +569,7 @@
       }
     ];
   };
-  Fabric-0-16-14 = {
+  "Fabric 0.16.14" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.14/fabric-loader-0.16.14.jar";
       sha256 = "sha256-nte39BlxU62X1xtLnNkUiYno8MYAk0sDXORfPvAD78A=";
@@ -607,7 +607,7 @@
       }
     ];
   };
-  Fabric-0-16-13 = {
+  "Fabric 0.16.13" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.13/fabric-loader-0.16.13.jar";
       sha256 = "sha256-AwUTPg6ooHK3VyggX8Bn8a/Qiy/gSPCARl7VQkAJbmY=";
@@ -645,7 +645,7 @@
       }
     ];
   };
-  Fabric-0-16-12 = {
+  "Fabric 0.16.12" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.12/fabric-loader-0.16.12.jar";
       sha256 = "sha256-kP4K88Tn7U8LtsLvRAJ8LvNdlvzl3zN4b33kRgWtuGU=";
@@ -683,7 +683,7 @@
       }
     ];
   };
-  Fabric-0-16-11 = {
+  "Fabric 0.16.11" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.11/fabric-loader-0.16.11.jar";
       sha256 = "sha256-VYzJ0EcZC1TwcVNnvswAUypdpnywgtmpR9mAnD2H/PU=";
@@ -721,7 +721,7 @@
       }
     ];
   };
-  Fabric-0-16-10 = {
+  "Fabric 0.16.10" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.10/fabric-loader-0.16.10.jar";
       sha256 = "sha256-I1V6fW2j25cab5Ygy2LntubRUJ9ROOu4dSmHfSQA5Wg=";
@@ -759,7 +759,7 @@
       }
     ];
   };
-  Fabric-0-16-9 = {
+  "Fabric 0.16.9" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.9/fabric-loader-0.16.9.jar";
       sha256 = "sha256-sbHQXp7lLGu5aP7PT34OTq2OyJC6lQPCE98NqoQx8fo=";
@@ -797,7 +797,7 @@
       }
     ];
   };
-  Fabric-0-16-8 = {
+  "Fabric 0.16.8" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.8/fabric-loader-0.16.8.jar";
       sha256 = "sha256-zy9C2Lz/o4lxkOmRCQj5rY4PWTaffiIf6nmEi9m+SDA=";
@@ -835,7 +835,7 @@
       }
     ];
   };
-  Fabric-0-16-7 = {
+  "Fabric 0.16.7" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.7/fabric-loader-0.16.7.jar";
       sha256 = "sha256-jYTz7rboQ1x6Jt2wtF+1eap11dmv9c07KotXcmnBUwM=";
@@ -873,7 +873,7 @@
       }
     ];
   };
-  Fabric-0-16-6 = {
+  "Fabric 0.16.6" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.6/fabric-loader-0.16.6.jar";
       sha256 = "sha256-eabGaelRJra269krZgPEtyBqDAkmZTCKaXwPuc0BAa4=";
@@ -911,7 +911,7 @@
       }
     ];
   };
-  Fabric-0-16-5 = {
+  "Fabric 0.16.5" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.5/fabric-loader-0.16.5.jar";
       sha256 = "sha256-Wblk7cW3abujpujRh2mdi6UZ8IHpZLhLLkLh1Y4AsOk=";
@@ -949,7 +949,7 @@
       }
     ];
   };
-  Fabric-0-16-4 = {
+  "Fabric 0.16.4" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.4/fabric-loader-0.16.4.jar";
       sha256 = "sha256-/TkuLMgYecgQKWMMTpds31SMEbPtctW1u6fStHii2HQ=";
@@ -987,7 +987,7 @@
       }
     ];
   };
-  Fabric-0-16-3 = {
+  "Fabric 0.16.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.3/fabric-loader-0.16.3.jar";
       sha256 = "sha256-0V8qLDoOYiPO5SNqOLCeYZYObwECN+25Ay8g0Zqx24Q=";
@@ -1025,7 +1025,7 @@
       }
     ];
   };
-  Fabric-0-16-2 = {
+  "Fabric 0.16.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.2/fabric-loader-0.16.2.jar";
       sha256 = "sha256-4k3jWaXqOzufn9IPL+BkGXzw+BZemuho0l6BOxzYdZM=";
@@ -1063,7 +1063,7 @@
       }
     ];
   };
-  Fabric-0-16-1 = {
+  "Fabric 0.16.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.1/fabric-loader-0.16.1.jar";
       sha256 = "sha256-8az30jUJBUQKEdO5p3cQEBENJvWTxYNIHT5sSgX0NeQ=";
@@ -1101,7 +1101,7 @@
       }
     ];
   };
-  Fabric-0-16-0 = {
+  "Fabric 0.16.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.16.0/fabric-loader-0.16.0.jar";
       sha256 = "sha256-hh4fpOO1z/d+2CCLinG5+uNhEW2pxFYI5EhKb6vMfKw=";
@@ -1139,7 +1139,7 @@
       }
     ];
   };
-  Fabric-0-15-11 = {
+  "Fabric 0.15.11" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.11/fabric-loader-0.15.11.jar";
       sha256 = "sha256-9Y/KJxtbSN1Pj6rXkrCQAkOehETVCvZwuEk947LYXwg=";
@@ -1177,7 +1177,7 @@
       }
     ];
   };
-  Fabric-0-15-10 = {
+  "Fabric 0.15.10" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.10/fabric-loader-0.15.10.jar";
       sha256 = "sha256-hAyyjrKQ7v6IDWLXu64otDQSQBLN7sRvLexKoPkpjew=";
@@ -1215,7 +1215,7 @@
       }
     ];
   };
-  Fabric-0-15-9 = {
+  "Fabric 0.15.9" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.9/fabric-loader-0.15.9.jar";
       sha256 = "sha256-CF7XRb2Q8Pv8Um4Zchr5ndQ369BDmLpfua5dwxl95RM=";
@@ -1253,7 +1253,7 @@
       }
     ];
   };
-  Fabric-0-15-8 = {
+  "Fabric 0.15.8" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.8/fabric-loader-0.15.8.jar";
       sha256 = "sha256-b05WAu9EtxFmjyetgkcrBhT6emSw8KN0/bgScieMLxM=";
@@ -1291,7 +1291,7 @@
       }
     ];
   };
-  Fabric-0-15-7 = {
+  "Fabric 0.15.7" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.7/fabric-loader-0.15.7.jar";
       sha256 = "sha256-mcDGI2Y4HZ/s4FIMEd8nPUT0vtoohfylRPBsoBRipZM=";
@@ -1329,7 +1329,7 @@
       }
     ];
   };
-  Fabric-0-15-6 = {
+  "Fabric 0.15.6" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.6/fabric-loader-0.15.6.jar";
       sha256 = "sha256-JFcHqD8awIHOcSFnORDLmAvpa/szGfL8jP/7WI2S41A=";
@@ -1367,7 +1367,7 @@
       }
     ];
   };
-  Fabric-0-15-5 = {
+  "Fabric 0.15.5" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.5/fabric-loader-0.15.5.jar";
       sha256 = "sha256-5z4oCj+2koztNCsj8ZI3qAWNFQp7sm744/wGi2phGwU=";
@@ -1405,7 +1405,7 @@
       }
     ];
   };
-  Fabric-0-15-4 = {
+  "Fabric 0.15.4" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.4/fabric-loader-0.15.4.jar";
       sha256 = "sha256-iuqcdXL3aNaGua2kwyOnEYdOEddnyJZOtzBdY5335iI=";
@@ -1443,7 +1443,7 @@
       }
     ];
   };
-  Fabric-0-15-3 = {
+  "Fabric 0.15.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.3/fabric-loader-0.15.3.jar";
       sha256 = "sha256-h8rH9aoBVDx2B9fnUcqfan7hve3L4uB5X2gkt0eCWTY=";
@@ -1481,7 +1481,7 @@
       }
     ];
   };
-  Fabric-0-15-2 = {
+  "Fabric 0.15.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.2/fabric-loader-0.15.2.jar";
       sha256 = "sha256-ZwWh/SZerTqbSerPdl7drMQxlTR9TYToYfpS/9pePec=";
@@ -1519,7 +1519,7 @@
       }
     ];
   };
-  Fabric-0-15-1 = {
+  "Fabric 0.15.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.1/fabric-loader-0.15.1.jar";
       sha256 = "sha256-K/TyVjhi9yzgNDDVtvFyEZ/3XrhYWddUcMAmcjrN/cM=";
@@ -1557,7 +1557,7 @@
       }
     ];
   };
-  Fabric-0-15-0 = {
+  "Fabric 0.15.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.0/fabric-loader-0.15.0.jar";
       sha256 = "sha256-E6i5nASSdXapPZyI4kSMRLS4KlPfsc3KEJ0xNJ/Ko+g=";
@@ -1595,7 +1595,7 @@
       }
     ];
   };
-  Fabric-0-14-25 = {
+  "Fabric 0.14.25" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.25/fabric-loader-0.14.25.jar";
       sha256 = "sha256-154CgXEmAmAsvSuOioh+yTsxaAwoCNQXCvdnyhYHBCk=";
@@ -1645,7 +1645,7 @@
       }
     ];
   };
-  Fabric-0-14-24 = {
+  "Fabric 0.14.24" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.24/fabric-loader-0.14.24.jar";
       sha256 = "sha256-Iw9Qk2EFevvigf7hqncHnxuOl+C3tcjqO2pvvx/Z1sU=";
@@ -1695,7 +1695,7 @@
       }
     ];
   };
-  Fabric-0-14-23 = {
+  "Fabric 0.14.23" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.23/fabric-loader-0.14.23.jar";
       sha256 = "sha256-95LlwIOBBb2jDlfH/7uFIh2VKn19o9ZbbR445wYdfzc=";
@@ -1745,7 +1745,7 @@
       }
     ];
   };
-  Fabric-0-14-22 = {
+  "Fabric 0.14.22" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.22/fabric-loader-0.14.22.jar";
       sha256 = "sha256-EcU1nI+kk2+4/ok0kJzYBNRnSOIvHOqviUd01rrrOYQ=";
@@ -1795,7 +1795,7 @@
       }
     ];
   };
-  Fabric-0-14-21 = {
+  "Fabric 0.14.21" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.21/fabric-loader-0.14.21.jar";
       sha256 = "sha256-c9i4hOOHxc0cEubWe6MQkhSyCS7pJ0wbJN0pfHJnFPQ=";
@@ -1845,7 +1845,7 @@
       }
     ];
   };
-  Fabric-0-14-20 = {
+  "Fabric 0.14.20" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.20/fabric-loader-0.14.20.jar";
       sha256 = "sha256-SsqYspMAmXIfUtSNqh84glCPDfcRy2n+sFUaIcZfFCc=";
@@ -1895,7 +1895,7 @@
       }
     ];
   };
-  Fabric-0-14-19 = {
+  "Fabric 0.14.19" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.19/fabric-loader-0.14.19.jar";
       sha256 = "sha256-L0uVYLBiwEQkVP4D9ZYCwTTXGzGNN+q0WJUO69BhSuU=";
@@ -1945,7 +1945,7 @@
       }
     ];
   };
-  Fabric-0-14-18 = {
+  "Fabric 0.14.18" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.18/fabric-loader-0.14.18.jar";
       sha256 = "sha256-f5USTuwKk7VMrmH8w8f5cNu9HjuGiqVfp8Y05axdh3Q=";
@@ -1995,7 +1995,7 @@
       }
     ];
   };
-  Fabric-0-14-17 = {
+  "Fabric 0.14.17" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.17/fabric-loader-0.14.17.jar";
       sha256 = "sha256-i4rm+flNrpc52osdv4rv/a9OhyydLaXttP1wZ16tQXE=";
@@ -2045,7 +2045,7 @@
       }
     ];
   };
-  Fabric-0-14-16 = {
+  "Fabric 0.14.16" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.16/fabric-loader-0.14.16.jar";
       sha256 = "sha256-ha7V68HlqpZdxXC1wuzkOrvzmmbjtlr2nlevkdrkrWE=";
@@ -2095,7 +2095,7 @@
       }
     ];
   };
-  Fabric-0-14-15 = {
+  "Fabric 0.14.15" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.15/fabric-loader-0.14.15.jar";
       sha256 = "sha256-hydTJwHrgNxuu60PJMPpCqXlltY0uydddSsZ7DVfA0Q=";
@@ -2145,7 +2145,7 @@
       }
     ];
   };
-  Fabric-0-14-14 = {
+  "Fabric 0.14.14" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.14/fabric-loader-0.14.14.jar";
       sha256 = "sha256-VZBxZ06t6sKz2v9CHzk0L5meAWi/n2KsyKOylykPb0s=";
@@ -2195,7 +2195,7 @@
       }
     ];
   };
-  Fabric-0-14-13 = {
+  "Fabric 0.14.13" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.13/fabric-loader-0.14.13.jar";
       sha256 = "sha256-D93uTfsUBH5zHqIh4kzBfb3SWo6u0QuDK8SP5e4ibgs=";
@@ -2245,7 +2245,7 @@
       }
     ];
   };
-  Fabric-0-14-12 = {
+  "Fabric 0.14.12" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.12/fabric-loader-0.14.12.jar";
       sha256 = "sha256-cxt68+Uu2l/lsshHXjSUZ6L/nSi4Nknhf5VjlgkpAxE=";
@@ -2295,7 +2295,7 @@
       }
     ];
   };
-  Fabric-0-14-11 = {
+  "Fabric 0.14.11" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.11/fabric-loader-0.14.11.jar";
       sha256 = "sha256-ZgXAZLnXRNyUhTLN3RkZ5cEJPGPEjcRBWu8kWcdu0pY=";
@@ -2345,7 +2345,7 @@
       }
     ];
   };
-  Fabric-0-14-10 = {
+  "Fabric 0.14.10" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.10/fabric-loader-0.14.10.jar";
       sha256 = "sha256-EnlkoKmDbN01ld2FpiMgboBad87V6xavhkmMdMVchns=";
@@ -2395,7 +2395,7 @@
       }
     ];
   };
-  Fabric-0-14-9 = {
+  "Fabric 0.14.9" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.9/fabric-loader-0.14.9.jar";
       sha256 = "sha256-OebwPENFOer7raM1NHrs/pRYL1Ec/jKEO5sRV2dG+xk=";
@@ -2445,7 +2445,7 @@
       }
     ];
   };
-  Fabric-0-14-8 = {
+  "Fabric 0.14.8" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.8/fabric-loader-0.14.8.jar";
       sha256 = "sha256-5TQZgHvSeSkvPHeScMO0CMFRkhhFrDYPdboLROd26R8=";
@@ -2495,7 +2495,7 @@
       }
     ];
   };
-  Fabric-0-14-7 = {
+  "Fabric 0.14.7" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.7/fabric-loader-0.14.7.jar";
       sha256 = "sha256-9PjIx3Wtxu5v8AbhIoXHZNWYe34g9LvlbNZJH4IifMA=";
@@ -2545,7 +2545,7 @@
       }
     ];
   };
-  Fabric-0-14-6 = {
+  "Fabric 0.14.6" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.6/fabric-loader-0.14.6.jar";
       sha256 = "sha256-uLmN78fqHJ26yjx4trcDFg4hnLBxXkMHrW5+/r3lSWc=";
@@ -2595,7 +2595,7 @@
       }
     ];
   };
-  Fabric-0-14-5 = {
+  "Fabric 0.14.5" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.5/fabric-loader-0.14.5.jar";
       sha256 = "sha256-mGKUdyh1KDouzz3hAndZWVUVBDxEqxRDdQqd61xe0V4=";
@@ -2645,7 +2645,7 @@
       }
     ];
   };
-  Fabric-0-14-4 = {
+  "Fabric 0.14.4" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.4/fabric-loader-0.14.4.jar";
       sha256 = "sha256-rTWQr/GlG512/E/iCfjruv+ndvs+p+l1+tFYNPE7YLs=";
@@ -2695,7 +2695,7 @@
       }
     ];
   };
-  Fabric-0-14-3 = {
+  "Fabric 0.14.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.3/fabric-loader-0.14.3.jar";
       sha256 = "sha256-PzM1nNZo1KdsOC13sJnsGXgBYFMM26yULxWcyjdaGv0=";
@@ -2745,7 +2745,7 @@
       }
     ];
   };
-  Fabric-0-14-2 = {
+  "Fabric 0.14.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.2/fabric-loader-0.14.2.jar";
       sha256 = "sha256-TvVhS0zY0QKapxiaGbQbTmvi3s3H8N42m25s33OZ55g=";
@@ -2795,7 +2795,7 @@
       }
     ];
   };
-  Fabric-0-14-1 = {
+  "Fabric 0.14.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.1/fabric-loader-0.14.1.jar";
       sha256 = "sha256-lgeoXPuWFy3x8oe4zE+yBVxgzn81H6XnP4vkRotd1Xo=";
@@ -2845,7 +2845,7 @@
       }
     ];
   };
-  Fabric-0-14-0 = {
+  "Fabric 0.14.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.14.0/fabric-loader-0.14.0.jar";
       sha256 = "sha256-MHFGFxwpXkhPazgaGaZbgOCMsfVyJ5s7x9BBmxuYeOU=";
@@ -2895,7 +2895,7 @@
       }
     ];
   };
-  Fabric-0-13-3 = {
+  "Fabric 0.13.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.13.3/fabric-loader-0.13.3.jar";
       sha256 = "sha256-pgRZuUjOjLv3X6OBQksIqCZZ9SJG8QfLx09QPZKlCyI=";
@@ -2945,7 +2945,7 @@
       }
     ];
   };
-  Fabric-0-13-2 = {
+  "Fabric 0.13.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.13.2/fabric-loader-0.13.2.jar";
       sha256 = "sha256-DJjtaOsHofYap+cQWvANvO7mBsjki2Ndn5jzVSBF9aw=";
@@ -2995,7 +2995,7 @@
       }
     ];
   };
-  Fabric-0-13-1 = {
+  "Fabric 0.13.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.13.1/fabric-loader-0.13.1.jar";
       sha256 = "sha256-OMaOVHQ7aNPWcFYvEFYGzmcTv3AnqcUvGOGi8RGGt8I=";
@@ -3045,7 +3045,7 @@
       }
     ];
   };
-  Fabric-0-13-0 = {
+  "Fabric 0.13.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.13.0/fabric-loader-0.13.0.jar";
       sha256 = "sha256-QJYFL/nQuHPJWp+DqXSRbHS9mgMXtXm9e/qkZTrN4Fo=";
@@ -3095,7 +3095,7 @@
       }
     ];
   };
-  Fabric-0-12-12 = {
+  "Fabric 0.12.12" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.12/fabric-loader-0.12.12.jar";
       sha256 = "sha256-/MfPccROpjP1mLh29Dil370V1jUyXF5O7kSyeS67DRw=";
@@ -3145,7 +3145,7 @@
       }
     ];
   };
-  Fabric-0-12-11 = {
+  "Fabric 0.12.11" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.11/fabric-loader-0.12.11.jar";
       sha256 = "sha256-+uAUHAaQRX7XbkpGKySfCXc0y8yjR/T/ZYmCK0cxb5Q=";
@@ -3195,7 +3195,7 @@
       }
     ];
   };
-  Fabric-0-12-10 = {
+  "Fabric 0.12.10" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.10/fabric-loader-0.12.10.jar";
       sha256 = "sha256-H7QVD+Wg9BNj1jaGISAGPcYI50YV2ADwp4s3Fq5Orpk=";
@@ -3245,7 +3245,7 @@
       }
     ];
   };
-  Fabric-0-12-9 = {
+  "Fabric 0.12.9" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.9/fabric-loader-0.12.9.jar";
       sha256 = "sha256-fb3NYlctNDJ40uZ2x8I6ZeVRviN7VqKQpIfA5ZWbp9I=";
@@ -3295,7 +3295,7 @@
       }
     ];
   };
-  Fabric-0-12-8 = {
+  "Fabric 0.12.8" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.8/fabric-loader-0.12.8.jar";
       sha256 = "sha256-tbY0Qf9WQh36BGTH+bxyNhioBs8QyA4j0uoDpjyti6w=";
@@ -3345,7 +3345,7 @@
       }
     ];
   };
-  Fabric-0-12-7 = {
+  "Fabric 0.12.7" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.7/fabric-loader-0.12.7.jar";
       sha256 = "sha256-uZ3jDjhEo7NgF0cVcnj6Nt8wQMjPDHCvhbswgUEGPmw=";
@@ -3395,7 +3395,7 @@
       }
     ];
   };
-  Fabric-0-12-6 = {
+  "Fabric 0.12.6" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.6/fabric-loader-0.12.6.jar";
       sha256 = "sha256-QeyV5a/rnl+65HuQzYygdOAcT5B0KXK/G4RXjVmO+5I=";
@@ -3445,7 +3445,7 @@
       }
     ];
   };
-  Fabric-0-12-5 = {
+  "Fabric 0.12.5" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.5/fabric-loader-0.12.5.jar";
       sha256 = "sha256-bgJKUSid6J0aFB7JbBxVhVTqZlnYzv2cl9+jXUMhLZI=";
@@ -3495,7 +3495,7 @@
       }
     ];
   };
-  Fabric-0-12-4 = {
+  "Fabric 0.12.4" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.4/fabric-loader-0.12.4.jar";
       sha256 = "sha256-X6BzBxyg84zG94KK7+TlyPcfvv3l5lA67ASEopNiFTA=";
@@ -3545,7 +3545,7 @@
       }
     ];
   };
-  Fabric-0-12-3 = {
+  "Fabric 0.12.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.3/fabric-loader-0.12.3.jar";
       sha256 = "sha256-3ilIRY/ycxvqBnpG5mfDYLF2w3/TtuzQQaIoWXiWyBU=";
@@ -3595,7 +3595,7 @@
       }
     ];
   };
-  Fabric-0-12-2 = {
+  "Fabric 0.12.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.2/fabric-loader-0.12.2.jar";
       sha256 = "sha256-7XfMQCzXW4zqpmjnwdkydoeVygCpoQwKk+EykuOXt8o=";
@@ -3645,7 +3645,7 @@
       }
     ];
   };
-  Fabric-0-12-1 = {
+  "Fabric 0.12.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.1/fabric-loader-0.12.1.jar";
       sha256 = "sha256-ycGNhEYatYieT7++zD4vzCL5JHCAXx18QKxCKFiCPas=";
@@ -3695,7 +3695,7 @@
       }
     ];
   };
-  Fabric-0-12-0 = {
+  "Fabric 0.12.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.12.0/fabric-loader-0.12.0.jar";
       sha256 = "sha256-ouXjt9ONFq6wEkXM+ZJPRPf4x8Fxdx61FjlSrPU5V+M=";
@@ -3745,7 +3745,7 @@
       }
     ];
   };
-  Fabric-0-11-7 = {
+  "Fabric 0.11.7" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.7/fabric-loader-0.11.7.jar";
       sha256 = "sha256-v3pib3Kc2rJ0RkAPE+26auLIBTdxUTyQKp4lto3YDGU=";
@@ -3807,7 +3807,7 @@
       }
     ];
   };
-  Fabric-0-11-6 = {
+  "Fabric 0.11.6" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.6/fabric-loader-0.11.6.jar";
       sha256 = "sha256-TjAGZOkeEeIml0ZyY/PlkVPJUJsc3oG/e+kXE1Vuiho=";
@@ -3869,7 +3869,7 @@
       }
     ];
   };
-  Fabric-0-11-5 = {
+  "Fabric 0.11.5" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.5/fabric-loader-0.11.5.jar";
       sha256 = "sha256-4K+L62nNgP9nfOOJUoXMvoxXN0msBN1x4XN3CbKHPlw=";
@@ -3931,7 +3931,7 @@
       }
     ];
   };
-  Fabric-0-11-3 = {
+  "Fabric 0.11.3" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.3/fabric-loader-0.11.3.jar";
       sha256 = "sha256-dtJmcqmhlhd82Qpm/rJpIQljJjxkYQD/RvGHvsTK1bU=";
@@ -3993,7 +3993,7 @@
       }
     ];
   };
-  Fabric-0-11-2 = {
+  "Fabric 0.11.2" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.2/fabric-loader-0.11.2.jar";
       sha256 = "sha256-VWnilk4XxbPliq+KnELNE+xnCVUNGehPx2ojC4kuvgk=";
@@ -4055,7 +4055,7 @@
       }
     ];
   };
-  Fabric-0-11-1 = {
+  "Fabric 0.11.1" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.1/fabric-loader-0.11.1.jar";
       sha256 = "sha256-ECpG0AWYr48DzpTnlb14mb6H4RBnQaydgxVm1dJ6iyM=";
@@ -4117,7 +4117,7 @@
       }
     ];
   };
-  Fabric-0-11-0 = {
+  "Fabric 0.11.0" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.11.0/fabric-loader-0.11.0.jar";
       sha256 = "sha256-WpBC4Ww73OnAt/pOqJ8H1qf/c7og0w+lhPXg2ZP/O0I=";
@@ -4179,7 +4179,7 @@
       }
     ];
   };
-  Fabric-0-10-8 = {
+  "Fabric 0.10.8" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.8/fabric-loader-0.10.8.jar";
       sha256 = "sha256-kYkoeecXA9nTXsRtDNyUz9rbOVtqaA1Ptp9ltAgSmoY=";
@@ -4241,7 +4241,7 @@
       }
     ];
   };
-  Fabric-0-10-7 = {
+  "Fabric 0.10.7" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.7/fabric-loader-0.10.7.jar";
       sha256 = "sha256-dMssJZkOn7vL2p4fWqGzqbu2n/unYyoZTRAQGLTdDqE=";
@@ -4303,7 +4303,7 @@
       }
     ];
   };
-  Fabric-0-10-6-build-214 = {
+  "Fabric 0.10.6+build.214" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.6+build.214/fabric-loader-0.10.6+build.214.jar";
       sha256 = "sha256-8KTrAeykW/D54uy9VWdJxlCcwrjZNdIBVmVYYO5ZRNU=";
@@ -4365,7 +4365,7 @@
       }
     ];
   };
-  Fabric-0-10-5-build-213 = {
+  "Fabric 0.10.5+build.213" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.5+build.213/fabric-loader-0.10.5+build.213.jar";
       sha256 = "sha256-gqytrUXG/39M4gqojHQXuN9PJOjCK30vmA6LAognTRg=";
@@ -4423,7 +4423,7 @@
       }
     ];
   };
-  Fabric-0-10-4-build-212 = {
+  "Fabric 0.10.4+build.212" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.4+build.212/fabric-loader-0.10.4+build.212.jar";
       sha256 = "sha256-7keyjFvisYzGMtt0hJF5gUqAsqPphU7gNmAPvWI7mp0=";
@@ -4481,7 +4481,7 @@
       }
     ];
   };
-  Fabric-0-10-3-build-211 = {
+  "Fabric 0.10.3+build.211" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.3+build.211/fabric-loader-0.10.3+build.211.jar";
       sha256 = "sha256-Cyq2HPrVKUpe2mSNcLQTR9rF4IjSpGXhr+N1GsjuxXg=";
@@ -4539,7 +4539,7 @@
       }
     ];
   };
-  Fabric-0-10-2-build-210 = {
+  "Fabric 0.10.2+build.210" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.2+build.210/fabric-loader-0.10.2+build.210.jar";
       sha256 = "sha256-3E1HwvnouNrukSBMZtZns4VdZnK8SjbBiF2o+uZBr4s=";
@@ -4597,7 +4597,7 @@
       }
     ];
   };
-  Fabric-0-10-1-build-209 = {
+  "Fabric 0.10.1+build.209" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.1+build.209/fabric-loader-0.10.1+build.209.jar";
       sha256 = "sha256-p79IxvnQ6Ygaca3ggvIwat3mw+Z0NU4VbghdWxye1Uw=";
@@ -4655,7 +4655,7 @@
       }
     ];
   };
-  Fabric-0-10-0-build-208 = {
+  "Fabric 0.10.0+build.208" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.10.0+build.208/fabric-loader-0.10.0+build.208.jar";
       sha256 = "sha256-ExKCuYcaxB5ycJTEGviljFcw5aMr0rzFFB+7vxejTh4=";
@@ -4713,7 +4713,7 @@
       }
     ];
   };
-  Fabric-0-9-3-build-207 = {
+  "Fabric 0.9.3+build.207" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.9.3+build.207/fabric-loader-0.9.3+build.207.jar";
       sha256 = "sha256-WkecxVpMcp5XtMkFveOTYujAqxAlVc2WYO2JcaVdKZE=";
@@ -4771,7 +4771,7 @@
       }
     ];
   };
-  Fabric-0-9-2-build-206 = {
+  "Fabric 0.9.2+build.206" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.9.2+build.206/fabric-loader-0.9.2+build.206.jar";
       sha256 = "sha256-uWSzaXSLNFp1PJK/NXAF+d/KGDJR3ARnQwZzIUwhHYY=";
@@ -4829,7 +4829,7 @@
       }
     ];
   };
-  Fabric-0-9-1-build-205 = {
+  "Fabric 0.9.1+build.205" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.9.1+build.205/fabric-loader-0.9.1+build.205.jar";
       sha256 = "sha256-CODRpwWolmZxWWIXf6OY3ECyzzd1/a8wmWtDSgq7EFc=";
@@ -4887,7 +4887,7 @@
       }
     ];
   };
-  Fabric-0-9-0-build-204 = {
+  "Fabric 0.9.0+build.204" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.9.0+build.204/fabric-loader-0.9.0+build.204.jar";
       sha256 = "sha256-H7fRF6lHyiwhUcqrmnYTjzssBo1OMyhCvSaxMWGkS34=";
@@ -4945,7 +4945,7 @@
       }
     ];
   };
-  Fabric-0-8-9-build-203 = {
+  "Fabric 0.8.9+build.203" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.9+build.203/fabric-loader-0.8.9+build.203.jar";
       sha256 = "sha256-frOhjq3JelPyIEqEVE4N5ePwPUgYSx5XGi47Zmmgvd4=";
@@ -5003,7 +5003,7 @@
       }
     ];
   };
-  Fabric-0-8-8-build-202 = {
+  "Fabric 0.8.8+build.202" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.8+build.202/fabric-loader-0.8.8+build.202.jar";
       sha256 = "sha256-Fj8McIyCvDp069+4v07fXzyG4++ITCg0KYsJiF7eqJA=";
@@ -5061,7 +5061,7 @@
       }
     ];
   };
-  Fabric-0-8-7-build-201 = {
+  "Fabric 0.8.7+build.201" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.7+build.201/fabric-loader-0.8.7+build.201.jar";
       sha256 = "sha256-s9tB+gmnKUUP0bKuUAEg3oJS2t7I3d5td82SOCgBi2I=";
@@ -5119,7 +5119,7 @@
       }
     ];
   };
-  Fabric-0-8-6-build-200 = {
+  "Fabric 0.8.6+build.200" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.6+build.200/fabric-loader-0.8.6+build.200.jar";
       sha256 = "sha256-Xt1U4qbVmgDa/jC+lagIGoFr6WMDWPlF8+k+30Mtr7s=";
@@ -5177,7 +5177,7 @@
       }
     ];
   };
-  Fabric-0-8-5-build-199 = {
+  "Fabric 0.8.5+build.199" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.5+build.199/fabric-loader-0.8.5+build.199.jar";
       sha256 = "sha256-ZXliEaAHwSW3ctUeyDuux7NlqJEvSsWd7t40NyGMko0=";
@@ -5235,7 +5235,7 @@
       }
     ];
   };
-  Fabric-0-8-4-build-198 = {
+  "Fabric 0.8.4+build.198" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.4+build.198/fabric-loader-0.8.4+build.198.jar";
       sha256 = "sha256-D9j5GDRA7WEGOZ7lAinqGN4x4zWI9h1dv8lRsZq1nyk=";
@@ -5293,7 +5293,7 @@
       }
     ];
   };
-  Fabric-0-8-3-build-196 = {
+  "Fabric 0.8.3+build.196" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.3+build.196/fabric-loader-0.8.3+build.196.jar";
       sha256 = "sha256-oaU0+iwGvuJ4g+a5xBNvRW58CpNF8yhuXnU2fXlPeI8=";
@@ -5351,7 +5351,7 @@
       }
     ];
   };
-  Fabric-0-8-2-build-194 = {
+  "Fabric 0.8.2+build.194" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.2+build.194/fabric-loader-0.8.2+build.194.jar";
       sha256 = "sha256-hMa4yYqsi8oPq+TrRhjBp5lOBp7dl+BgnGBOLTy6m1Q=";
@@ -5409,7 +5409,7 @@
       }
     ];
   };
-  Fabric-0-8-1-build-193 = {
+  "Fabric 0.8.1+build.193" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.1+build.193/fabric-loader-0.8.1+build.193.jar";
       sha256 = "sha256-FiU7ZgzCK6Dbc/1661MtLthTdrsiEylWKnRt3a8lDRE=";
@@ -5467,7 +5467,7 @@
       }
     ];
   };
-  Fabric-0-8-0-build-192 = {
+  "Fabric 0.8.0+build.192" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.8.0+build.192/fabric-loader-0.8.0+build.192.jar";
       sha256 = "sha256-LOEmV+zbUeXCSugIpIGiuuyxOKCeh5PAQXMTfy4M1tg=";
@@ -5525,7 +5525,7 @@
       }
     ];
   };
-  Fabric-0-7-10-build-191 = {
+  "Fabric 0.7.10+build.191" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.10+build.191/fabric-loader-0.7.10+build.191.jar";
       sha256 = "sha256-q4sU+g7pD9+RuEhLyCl+8J5WL7B1XC/St5I2d36AnxM=";
@@ -5583,7 +5583,7 @@
       }
     ];
   };
-  Fabric-0-7-9-build-190 = {
+  "Fabric 0.7.9+build.190" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.9+build.190/fabric-loader-0.7.9+build.190.jar";
       sha256 = "sha256-+nJRZbmeyEdQtkmtNOttpmLuDQ0/v6oUuJuMRV2kTGc=";
@@ -5641,7 +5641,7 @@
       }
     ];
   };
-  Fabric-0-7-8-build-189 = {
+  "Fabric 0.7.8+build.189" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.8+build.189/fabric-loader-0.7.8+build.189.jar";
       sha256 = "sha256-sALiSyoNCByAY2+l8f4U57dG4DP/ETgKCT3BkzKvCW0=";
@@ -5699,7 +5699,7 @@
       }
     ];
   };
-  Fabric-0-7-8-build-188 = {
+  "Fabric 0.7.8+build.188" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.8+build.188/fabric-loader-0.7.8+build.188.jar";
       sha256 = "sha256-prhVkQ8ttbK7Wv/+V7j+wmlGMI1/VpzBrS8a6H/jjTY=";
@@ -5757,7 +5757,7 @@
       }
     ];
   };
-  Fabric-0-7-8-build-187 = {
+  "Fabric 0.7.8+build.187" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.8+build.187/fabric-loader-0.7.8+build.187.jar";
       sha256 = "sha256-4pqU81z9i1GXdkp0SnQCGGtlEC8F0bXk3oFQRtA5/58=";
@@ -5815,7 +5815,7 @@
       }
     ];
   };
-  Fabric-0-7-8-build-186 = {
+  "Fabric 0.7.8+build.186" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.8+build.186/fabric-loader-0.7.8+build.186.jar";
       sha256 = "sha256-cKLrEijvdsazP0z66kjV3nr2PFKfFJQVioe8ZQqQ/v8=";
@@ -5873,7 +5873,7 @@
       }
     ];
   };
-  Fabric-0-7-8-build-185 = {
+  "Fabric 0.7.8+build.185" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.8+build.185/fabric-loader-0.7.8+build.185.jar";
       sha256 = "sha256-rVQSGMbgdTzZW+0Jf7Xjoxqazs/diowEZUBt+57EN0M=";
@@ -5931,7 +5931,7 @@
       }
     ];
   };
-  Fabric-0-7-8-build-184 = {
+  "Fabric 0.7.8+build.184" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.8+build.184/fabric-loader-0.7.8+build.184.jar";
       sha256 = "sha256-T9aP1upLSacZvkrkX5PFCw2vKwSe/lPB/clRJJFQ1wM=";
@@ -5989,7 +5989,7 @@
       }
     ];
   };
-  Fabric-0-7-7-build-183 = {
+  "Fabric 0.7.7+build.183" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.7+build.183/fabric-loader-0.7.7+build.183.jar";
       sha256 = "sha256-AVOlN/yJxoL6fIMyh8DZiyptCC//VKc71pkMEP84dxw=";
@@ -6047,7 +6047,7 @@
       }
     ];
   };
-  Fabric-0-7-7-build-182 = {
+  "Fabric 0.7.7+build.182" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.7+build.182/fabric-loader-0.7.7+build.182.jar";
       sha256 = "sha256-f4uSg9uAVE+sOKNllSeyHtcm1CvZrG2Sr/5tsXVgUmQ=";
@@ -6105,7 +6105,7 @@
       }
     ];
   };
-  Fabric-0-7-6-build-181 = {
+  "Fabric 0.7.6+build.181" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.6+build.181/fabric-loader-0.7.6+build.181.jar";
       sha256 = "sha256-moBSG3P9VEJcKfZtcjghXHe7CJc3uq7K1rcVMJiGNF0=";
@@ -6163,7 +6163,7 @@
       }
     ];
   };
-  Fabric-0-7-6-build-180 = {
+  "Fabric 0.7.6+build.180" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.6+build.180/fabric-loader-0.7.6+build.180.jar";
       sha256 = "sha256-CjUyrbmJZPHYEKtoDnaVdLqRDZsx3ZdtXxGIy61bF5U=";
@@ -6221,7 +6221,7 @@
       }
     ];
   };
-  Fabric-0-7-6-build-179 = {
+  "Fabric 0.7.6+build.179" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.6+build.179/fabric-loader-0.7.6+build.179.jar";
       sha256 = "sha256-HLbOmGBmMrRfcVrj19L7ySNdvZIXAhA7UQdvxdFoZTc=";
@@ -6279,7 +6279,7 @@
       }
     ];
   };
-  Fabric-0-7-5-build-178 = {
+  "Fabric 0.7.5+build.178" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.5+build.178/fabric-loader-0.7.5+build.178.jar";
       sha256 = "sha256-MN69UewanynSXkDSa/fxJObB//Z5i6fx1gRiJBes/1g=";
@@ -6337,7 +6337,7 @@
       }
     ];
   };
-  Fabric-0-7-4-build-177 = {
+  "Fabric 0.7.4+build.177" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.4+build.177/fabric-loader-0.7.4+build.177.jar";
       sha256 = "sha256-IJGdI1mrZL53KSCjBBweiACKwsIcZpgSHxsaw0oQlKk=";
@@ -6395,7 +6395,7 @@
       }
     ];
   };
-  Fabric-0-7-3-build-176 = {
+  "Fabric 0.7.3+build.176" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.3+build.176/fabric-loader-0.7.3+build.176.jar";
       sha256 = "sha256-ZxlTIa1PAfIQD32DglXnfJC+Er7ApFMnwZXDMDDLV1M=";
@@ -6453,7 +6453,7 @@
       }
     ];
   };
-  Fabric-0-7-2-build-175 = {
+  "Fabric 0.7.2+build.175" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.2+build.175/fabric-loader-0.7.2+build.175.jar";
       sha256 = "sha256-em3rrdY5cgaiXk5e5X7Sed11Y9Bw/FYXJANUmeJaE+I=";
@@ -6511,7 +6511,7 @@
       }
     ];
   };
-  Fabric-0-7-2-build-174 = {
+  "Fabric 0.7.2+build.174" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.2+build.174/fabric-loader-0.7.2+build.174.jar";
       sha256 = "sha256-YdS+wj2IHVstS6zHI0kfFku0gnmVry45gJ9Wpi/UHoQ=";
@@ -6569,7 +6569,7 @@
       }
     ];
   };
-  Fabric-0-7-1-build-173 = {
+  "Fabric 0.7.1+build.173" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.1+build.173/fabric-loader-0.7.1+build.173.jar";
       sha256 = "sha256-t/CWVmBxzGADvWsJ9qkYpA4h795L56ms9HLZ3vUB3CE=";
@@ -6627,7 +6627,7 @@
       }
     ];
   };
-  Fabric-0-7-0-build-172 = {
+  "Fabric 0.7.0+build.172" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.0+build.172/fabric-loader-0.7.0+build.172.jar";
       sha256 = "sha256-pY4iE7wxmR9sGQEfqRdwlTGm8CN7bowZA/SzGGb3wf8=";
@@ -6685,7 +6685,7 @@
       }
     ];
   };
-  Fabric-0-7-0-build-171 = {
+  "Fabric 0.7.0+build.171" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.7.0+build.171/fabric-loader-0.7.0+build.171.jar";
       sha256 = "sha256-KSai2jj/+bUxiyNtDCYLLo2h5ffHTgknfQdql6y8qps=";
@@ -6743,7 +6743,7 @@
       }
     ];
   };
-  Fabric-0-6-4-build-170 = {
+  "Fabric 0.6.4+build.170" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.4+build.170/fabric-loader-0.6.4+build.170.jar";
       sha256 = "sha256-4OCWczKevxTiICzRgZltT62UVyk/6bn6lFiLeoU7Zv4=";
@@ -6801,7 +6801,7 @@
       }
     ];
   };
-  Fabric-0-6-4-build-169 = {
+  "Fabric 0.6.4+build.169" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.4+build.169/fabric-loader-0.6.4+build.169.jar";
       sha256 = "sha256-93Uxc/QuoQqvzEg10rdMQb/JHDGBvgmyPEf8DSgH16c=";
@@ -6859,7 +6859,7 @@
       }
     ];
   };
-  Fabric-0-6-3-build-168 = {
+  "Fabric 0.6.3+build.168" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.3+build.168/fabric-loader-0.6.3+build.168.jar";
       sha256 = "sha256-pg4RzKSG4Y7c4SRCyFvovBEpF9toHI2K5AQWeWW/548=";
@@ -6917,7 +6917,7 @@
       }
     ];
   };
-  Fabric-0-6-3-build-167 = {
+  "Fabric 0.6.3+build.167" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.3+build.167/fabric-loader-0.6.3+build.167.jar";
       sha256 = "sha256-iHf7ZdSDZnzY2j63tTF4T9typL2eYMI25MtvRAqGgGw=";
@@ -6975,7 +6975,7 @@
       }
     ];
   };
-  Fabric-0-6-2-build-166 = {
+  "Fabric 0.6.2+build.166" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.2+build.166/fabric-loader-0.6.2+build.166.jar";
       sha256 = "sha256-7R/Nr37P1BbHC6gOMRNaZ2Z8txHpyTQeElJYd8wNnyA=";
@@ -7033,7 +7033,7 @@
       }
     ];
   };
-  Fabric-0-6-1-build-165 = {
+  "Fabric 0.6.1+build.165" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.1+build.165/fabric-loader-0.6.1+build.165.jar";
       sha256 = "sha256-0msJyZp9eV9a9VMRLERNC1O4MAZIbHNYXcFaxs4uIX0=";
@@ -7091,7 +7091,7 @@
       }
     ];
   };
-  Fabric-0-6-1-build-164 = {
+  "Fabric 0.6.1+build.164" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.1+build.164/fabric-loader-0.6.1+build.164.jar";
       sha256 = "sha256-d48SJP17mC8mOLhhqEszc/8KBjIPNIcMslT9onLQLlE=";
@@ -7149,7 +7149,7 @@
       }
     ];
   };
-  Fabric-0-6-0-build-163 = {
+  "Fabric 0.6.0+build.163" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.6.0+build.163/fabric-loader-0.6.0+build.163.jar";
       sha256 = "sha256-doJ6LwYNtnbWNsewXcE4V1UyP/q+kCck3XnSH5atcoM=";
@@ -7207,7 +7207,7 @@
       }
     ];
   };
-  Fabric-0-5-0-build-162 = {
+  "Fabric 0.5.0+build.162" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.5.0+build.162/fabric-loader-0.5.0+build.162.jar";
       sha256 = "sha256-kDCMiWrvUyR7MnOyOSsxvZbhIHGIhOOBYCpzhT3TNm4=";
@@ -7265,7 +7265,7 @@
       }
     ];
   };
-  Fabric-0-4-9-build-161 = {
+  "Fabric 0.4.9+build.161" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.9+build.161/fabric-loader-0.4.9+build.161.jar";
       sha256 = "sha256-+7SkDF9+meDkzWwTV33hCtwNd/705B6Zpmyjc0XDZDs=";
@@ -7323,7 +7323,7 @@
       }
     ];
   };
-  Fabric-0-4-9-build-160 = {
+  "Fabric 0.4.9+build.160" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.9+build.160/fabric-loader-0.4.9+build.160.jar";
       sha256 = "sha256-nhjxkN/aTKI3yoslQ5cPrZ08FjMIb0gevR3kpW2+A7o=";
@@ -7381,7 +7381,7 @@
       }
     ];
   };
-  Fabric-0-4-8-build-159 = {
+  "Fabric 0.4.8+build.159" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.8+build.159/fabric-loader-0.4.8+build.159.jar";
       sha256 = "sha256-f0mnhP8W48PyoNPuRXjRaCLwdeiPi7bp42Rno9rl+x8=";
@@ -7439,7 +7439,7 @@
       }
     ];
   };
-  Fabric-0-4-8-build-158 = {
+  "Fabric 0.4.8+build.158" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.8+build.158/fabric-loader-0.4.8+build.158.jar";
       sha256 = "sha256-EqSlmDQgjunAlXeVbXv3bMEoKNwgh2Us478gf712Tkw=";
@@ -7497,7 +7497,7 @@
       }
     ];
   };
-  Fabric-0-4-8-build-157 = {
+  "Fabric 0.4.8+build.157" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.8+build.157/fabric-loader-0.4.8+build.157.jar";
       sha256 = "sha256-pnO27bpgZ+cUAYblsUYUmiNPZiYVW/BlSzm6SF8Kzus=";
@@ -7555,7 +7555,7 @@
       }
     ];
   };
-  Fabric-0-4-8-build-156 = {
+  "Fabric 0.4.8+build.156" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.8+build.156/fabric-loader-0.4.8+build.156.jar";
       sha256 = "sha256-nVEEVjj+2Q1uc8QsF5RAwQxZdZRD6t/O9YfuRyItB/c=";
@@ -7613,7 +7613,7 @@
       }
     ];
   };
-  Fabric-0-4-8-build-155 = {
+  "Fabric 0.4.8+build.155" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.8+build.155/fabric-loader-0.4.8+build.155.jar";
       sha256 = "sha256-oFgcUpXFWlFVVq8QmyDHnA36ck8bleYqsdb17PlqF9k=";
@@ -7671,7 +7671,7 @@
       }
     ];
   };
-  Fabric-0-4-8-build-154 = {
+  "Fabric 0.4.8+build.154" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.8+build.154/fabric-loader-0.4.8+build.154.jar";
       sha256 = "sha256-dIi9RN1nUG9csDMnMbxOguYDYPKC1qOrM7dmHo9vw/8=";
@@ -7729,7 +7729,7 @@
       }
     ];
   };
-  Fabric-0-4-7-build-153 = {
+  "Fabric 0.4.7+build.153" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.7+build.153/fabric-loader-0.4.7+build.153.jar";
       sha256 = "sha256-jd7qF99BSGOg71Oh9rKX+DnlkcQ7ULNbk4HCEf24j5c=";
@@ -7787,7 +7787,7 @@
       }
     ];
   };
-  Fabric-0-4-7-build-152 = {
+  "Fabric 0.4.7+build.152" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.7+build.152/fabric-loader-0.4.7+build.152.jar";
       sha256 = "sha256-vVe8h2UyMvdGMo5lUqSEoqihwyYaY3OJerqHJab5tlk=";
@@ -7845,7 +7845,7 @@
       }
     ];
   };
-  Fabric-0-4-7-build-148 = {
+  "Fabric 0.4.7+build.148" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.7+build.148/fabric-loader-0.4.7+build.148.jar";
       sha256 = "sha256-F08rgo4h2z+XxSqxQ8M0mriDQM7XohPtII//n+XW8UM=";
@@ -7903,7 +7903,7 @@
       }
     ];
   };
-  Fabric-0-4-7-build-147 = {
+  "Fabric 0.4.7+build.147" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.7+build.147/fabric-loader-0.4.7+build.147.jar";
       sha256 = "sha256-rRZApmxiIxA/eBFRflcUyF5gx6q4+Jai0n2BJjHZDkU=";
@@ -7961,7 +7961,7 @@
       }
     ];
   };
-  Fabric-0-4-7-build-146 = {
+  "Fabric 0.4.7+build.146" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.7+build.146/fabric-loader-0.4.7+build.146.jar";
       sha256 = "sha256-5uiea6s/3aRVdbz/RygLLmUkbWxiKW/CfUGDW4/meaY=";
@@ -8019,7 +8019,7 @@
       }
     ];
   };
-  Fabric-0-4-6-build-145 = {
+  "Fabric 0.4.6+build.145" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.6+build.145/fabric-loader-0.4.6+build.145.jar";
       sha256 = "sha256-fTz6WUhscMg8KOzH9CVudh0ofNEH5ubFtmtRXUvbB0A=";
@@ -8077,7 +8077,7 @@
       }
     ];
   };
-  Fabric-0-4-6-build-144 = {
+  "Fabric 0.4.6+build.144" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.6+build.144/fabric-loader-0.4.6+build.144.jar";
       sha256 = "sha256-kl1aRcs2wNJ1FSDvSAzO+trDmdX3GfomZ8TZyzfS9io=";
@@ -8135,7 +8135,7 @@
       }
     ];
   };
-  Fabric-0-4-6-build-143 = {
+  "Fabric 0.4.6+build.143" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.6+build.143/fabric-loader-0.4.6+build.143.jar";
       sha256 = "sha256-BGJgFkABJHKOJFYAB0ckxFRkqQUJFGkF82ham7zTVQ4=";
@@ -8193,7 +8193,7 @@
       }
     ];
   };
-  Fabric-0-4-6-build-142 = {
+  "Fabric 0.4.6+build.142" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.6+build.142/fabric-loader-0.4.6+build.142.jar";
       sha256 = "sha256-pII1gGUBoxiFcxMNr8msnQ39OPnM8E2eby/jUEIvE0E=";
@@ -8251,7 +8251,7 @@
       }
     ];
   };
-  Fabric-0-4-6-build-141 = {
+  "Fabric 0.4.6+build.141" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.6+build.141/fabric-loader-0.4.6+build.141.jar";
       sha256 = "sha256-y+KrSsU7gL2AQ6ACxZvzUVo9W31Yh7d7X/pymopPNoQ=";
@@ -8309,7 +8309,7 @@
       }
     ];
   };
-  Fabric-0-4-5-build-140 = {
+  "Fabric 0.4.5+build.140" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.5+build.140/fabric-loader-0.4.5+build.140.jar";
       sha256 = "sha256-8qx7do9h8jwGuawnwd2s7PyePi4f74YcD3tAFq58D78=";
@@ -8367,7 +8367,7 @@
       }
     ];
   };
-  Fabric-0-4-4-build-139 = {
+  "Fabric 0.4.4+build.139" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.4+build.139/fabric-loader-0.4.4+build.139.jar";
       sha256 = "sha256-XklWa1XbHW0pitfAKiIvoSSJxOXTPbxvoffPpPOnWZs=";
@@ -8425,7 +8425,7 @@
       }
     ];
   };
-  Fabric-0-4-4-build-138 = {
+  "Fabric 0.4.4+build.138" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.4+build.138/fabric-loader-0.4.4+build.138.jar";
       sha256 = "sha256-SQFEXlmLDy1iYOqkz33Pra1WTxVByHBf6ZfOJ5ySw6U=";
@@ -8483,7 +8483,7 @@
       }
     ];
   };
-  Fabric-0-4-4-build-137 = {
+  "Fabric 0.4.4+build.137" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.4+build.137/fabric-loader-0.4.4+build.137.jar";
       sha256 = "sha256-PIjNF+U46MLGbvFe9QHM1pzDStyGkG1XE9ccXmGYTZ4=";
@@ -8541,7 +8541,7 @@
       }
     ];
   };
-  Fabric-0-4-4-build-136 = {
+  "Fabric 0.4.4+build.136" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.4+build.136/fabric-loader-0.4.4+build.136.jar";
       sha256 = "sha256-FmB4IPTLaosQKnbtXBpW76BW2qLPwZadNkcX9tpU0Ao=";
@@ -8599,7 +8599,7 @@
       }
     ];
   };
-  Fabric-0-4-3-build-135 = {
+  "Fabric 0.4.3+build.135" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.3+build.135/fabric-loader-0.4.3+build.135.jar";
       sha256 = "sha256-ViUuUz8qm0BbdofC3HDFH5mbmdgU4/qa0BYUBhluhQA=";
@@ -8653,7 +8653,7 @@
       }
     ];
   };
-  Fabric-0-4-3-build-134 = {
+  "Fabric 0.4.3+build.134" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.3+build.134/fabric-loader-0.4.3+build.134.jar";
       sha256 = "sha256-KGIfSPdp68Qvymc6iXzu6ndWD+PF4op1/mE2AlVdAUQ=";
@@ -8707,7 +8707,7 @@
       }
     ];
   };
-  Fabric-0-4-3-build-133 = {
+  "Fabric 0.4.3+build.133" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.3+build.133/fabric-loader-0.4.3+build.133.jar";
       sha256 = "sha256-p9FPavcfc5EtAw94PvAhEgACBfJi3yZz6d66HyJxOCo=";
@@ -8761,7 +8761,7 @@
       }
     ];
   };
-  Fabric-0-4-2-build-132 = {
+  "Fabric 0.4.2+build.132" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.2+build.132/fabric-loader-0.4.2+build.132.jar";
       sha256 = "sha256-lEi+2k2OsRTcffZcg6WdpGQOXLZHdPVIABkC1jbGiRk=";
@@ -8815,7 +8815,7 @@
       }
     ];
   };
-  Fabric-0-4-2-build-131 = {
+  "Fabric 0.4.2+build.131" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.2+build.131/fabric-loader-0.4.2+build.131.jar";
       sha256 = "sha256-kSEPT12Ae/hinRtTJkhCi3oR/7dlkPlbLnSrNHufH8M=";
@@ -8869,7 +8869,7 @@
       }
     ];
   };
-  Fabric-0-4-2-build-130 = {
+  "Fabric 0.4.2+build.130" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.2+build.130/fabric-loader-0.4.2+build.130.jar";
       sha256 = "sha256-QAn2W5Y36G/JYeL/tQk95KhZscNCDBoZOhDdh5kWomg=";
@@ -8923,7 +8923,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-129 = {
+  "Fabric 0.4.1+build.129" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.129/fabric-loader-0.4.1+build.129.jar";
       sha256 = "sha256-svrTyFPma0JWxQisgbclzJ/0NRLO8YfeADSlsH8I1BM=";
@@ -8977,7 +8977,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-128 = {
+  "Fabric 0.4.1+build.128" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.128/fabric-loader-0.4.1+build.128.jar";
       sha256 = "sha256-5CqGmySbdCbjha9AM5sgTU4O4IWBUzXghaKjFHJC19M=";
@@ -9031,7 +9031,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-127 = {
+  "Fabric 0.4.1+build.127" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.127/fabric-loader-0.4.1+build.127.jar";
       sha256 = "sha256-k153CGsxOrrwjmKbXsp0d1zQq6uu4F0TScFfneAGJjs=";
@@ -9085,7 +9085,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-126 = {
+  "Fabric 0.4.1+build.126" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.126/fabric-loader-0.4.1+build.126.jar";
       sha256 = "sha256-T5Qmve4M6DropedttckDbrtHWtAFZKyRyAlVhTc/oIA=";
@@ -9139,7 +9139,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-125 = {
+  "Fabric 0.4.1+build.125" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.125/fabric-loader-0.4.1+build.125.jar";
       sha256 = "sha256-FvN3oFzWroHDnS4SO69D2vquW/TEo38Pyq60tIZh3qo=";
@@ -9193,7 +9193,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-124 = {
+  "Fabric 0.4.1+build.124" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.124/fabric-loader-0.4.1+build.124.jar";
       sha256 = "sha256-9td7QT0V7/G+TEU847wK2KRhO4WMHX4o1uxf+GRrOmY=";
@@ -9247,7 +9247,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-123 = {
+  "Fabric 0.4.1+build.123" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.123/fabric-loader-0.4.1+build.123.jar";
       sha256 = "sha256-gwigpS2+pohNPev+DW+6Qh2cEyXrlcJGZUWscpON6GU=";
@@ -9301,7 +9301,7 @@
       }
     ];
   };
-  Fabric-0-4-1-build-122 = {
+  "Fabric 0.4.1+build.122" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.1+build.122/fabric-loader-0.4.1+build.122.jar";
       sha256 = "sha256-B8AJLav9T9QzKq7SRC9Hd+Uyhpu2Fh473ECsHxPYnUY=";
@@ -9355,7 +9355,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-121 = {
+  "Fabric 0.4.0+build.121" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.121/fabric-loader-0.4.0+build.121.jar";
       sha256 = "sha256-p8eaHeOTPpeS2s5w9P93izRraZSKdv96X1KFr9jEM/A=";
@@ -9409,7 +9409,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-120 = {
+  "Fabric 0.4.0+build.120" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.120/fabric-loader-0.4.0+build.120.jar";
       sha256 = "sha256-GzL/Qv2wyKI9L+DROt6qRZasFn5EYReK62glB+6SoEU=";
@@ -9463,7 +9463,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-119 = {
+  "Fabric 0.4.0+build.119" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.119/fabric-loader-0.4.0+build.119.jar";
       sha256 = "sha256-sP7na6qw9XS+nc0NiPT3FoZwHK47c7a4/K6HAQcZGVc=";
@@ -9517,7 +9517,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-118 = {
+  "Fabric 0.4.0+build.118" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.118/fabric-loader-0.4.0+build.118.jar";
       sha256 = "sha256-8hWJUgcXtuXgdZ0K10E+pW0GURkZJBQ11HEwwmVOGl0=";
@@ -9571,7 +9571,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-117 = {
+  "Fabric 0.4.0+build.117" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.117/fabric-loader-0.4.0+build.117.jar";
       sha256 = "sha256-rTQkwIYW/HblREXPSbkx5A4e1+Nk/87x27O9ojUiyPY=";
@@ -9625,7 +9625,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-116 = {
+  "Fabric 0.4.0+build.116" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.116/fabric-loader-0.4.0+build.116.jar";
       sha256 = "sha256-gAYO7Ef3Rl0QLG3GvMkikVDns19RS8p6emjZul8yx38=";
@@ -9679,7 +9679,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-115 = {
+  "Fabric 0.4.0+build.115" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.115/fabric-loader-0.4.0+build.115.jar";
       sha256 = "sha256-/AQgcMaoyY7kQFyMjXHgCPGwM8iW9mImtfBJu0lHR7A=";
@@ -9733,7 +9733,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-114 = {
+  "Fabric 0.4.0+build.114" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.114/fabric-loader-0.4.0+build.114.jar";
       sha256 = "sha256-VPoHbntMUfuQWlDbb4+tYU5fze5sViAcwzJgcjnkauc=";
@@ -9787,7 +9787,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-113 = {
+  "Fabric 0.4.0+build.113" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.113/fabric-loader-0.4.0+build.113.jar";
       sha256 = "sha256-jM/Ax4JA58Vc2/Kxormz4KSJ52qFF3G5nPB1tIeGxyE=";
@@ -9841,7 +9841,7 @@
       }
     ];
   };
-  Fabric-0-4-0-build-112 = {
+  "Fabric 0.4.0+build.112" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.4.0+build.112/fabric-loader-0.4.0+build.112.jar";
       sha256 = "sha256-zjJ03w9qnJQieQ1HwWjy8hTYgBIxIcunty7cwsfK9SI=";
@@ -9895,7 +9895,7 @@
       }
     ];
   };
-  Fabric-0-3-7-111 = {
+  "Fabric 0.3.7.111" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.7.111/fabric-loader-0.3.7.111.jar";
       sha256 = "sha256-WU7cTsVX8boiRKdl+Ti2tw9XmnBb1r8HSUSpePysUPE=";
@@ -9941,7 +9941,7 @@
       }
     ];
   };
-  Fabric-0-3-7-110 = {
+  "Fabric 0.3.7.110" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.7.110/fabric-loader-0.3.7.110.jar";
       sha256 = "sha256-xSiZn6M+LNPq2NHVJlVdxlv3KZnlufbHMz6e3TrP4Xc=";
@@ -9987,7 +9987,7 @@
       }
     ];
   };
-  Fabric-0-3-7-109 = {
+  "Fabric 0.3.7.109" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.7.109/fabric-loader-0.3.7.109.jar";
       sha256 = "sha256-hd4tsdaykvRoDI24Nv9bvXIG7Tiar/69c4m5gcoRdSA=";
@@ -10033,7 +10033,7 @@
       }
     ];
   };
-  Fabric-0-3-7-108 = {
+  "Fabric 0.3.7.108" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.7.108/fabric-loader-0.3.7.108.jar";
       sha256 = "sha256-U5HPbd21hAPkbk/jB+O2fOvGC8qSZQhKQ5jFN2PIOJc=";
@@ -10079,7 +10079,7 @@
       }
     ];
   };
-  Fabric-0-3-6-107 = {
+  "Fabric 0.3.6.107" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.6.107/fabric-loader-0.3.6.107.jar";
       sha256 = "sha256-gTd+W1fLwW8BrTM8WQXiprZqiVGHxdcALgZiW9nylXk=";
@@ -10125,7 +10125,7 @@
       }
     ];
   };
-  Fabric-0-3-5-106 = {
+  "Fabric 0.3.5.106" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.5.106/fabric-loader-0.3.5.106.jar";
       sha256 = "sha256-jRgDTXUYIqO2SRkAD0wzRDK99+s+975AEp1C7dAsJnM=";
@@ -10171,7 +10171,7 @@
       }
     ];
   };
-  Fabric-0-3-4-105 = {
+  "Fabric 0.3.4.105" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.4.105/fabric-loader-0.3.4.105.jar";
       sha256 = "sha256-eopGNL/P0ypdqa4e9NTI3lTj72E4Kzmlq7RjlhDPoqg=";
@@ -10217,7 +10217,7 @@
       }
     ];
   };
-  Fabric-0-3-4-104 = {
+  "Fabric 0.3.4.104" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.4.104/fabric-loader-0.3.4.104.jar";
       sha256 = "sha256-k87y6mLrdpfxKjUI2IOxRm2Hze6VJt36wqXsrJIHpjQ=";
@@ -10263,7 +10263,7 @@
       }
     ];
   };
-  Fabric-0-3-4-103 = {
+  "Fabric 0.3.4.103" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.4.103/fabric-loader-0.3.4.103.jar";
       sha256 = "sha256-5XAajM3V2ImlTh9M2XMNF7KxIz6xIKKC54TnDqM++ss=";
@@ -10309,7 +10309,7 @@
       }
     ];
   };
-  Fabric-0-3-3-102 = {
+  "Fabric 0.3.3.102" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.3.102/fabric-loader-0.3.3.102.jar";
       sha256 = "sha256-Sge//IHQ2LyNi9K9S6MK/smUw/i0OHyyoKG7rcMYcUU=";
@@ -10355,7 +10355,7 @@
       }
     ];
   };
-  Fabric-0-3-3-101 = {
+  "Fabric 0.3.3.101" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.3.101/fabric-loader-0.3.3.101.jar";
       sha256 = "sha256-LTK3f3/Fo4UT5SzFAUI8eyLBLBYlzmTDojxyFejxBIo=";
@@ -10401,7 +10401,7 @@
       }
     ];
   };
-  Fabric-0-3-3-100 = {
+  "Fabric 0.3.3.100" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.3.100/fabric-loader-0.3.3.100.jar";
       sha256 = "sha256-YLvORwN3OcLmP0/6MOY5SXHNzaWxA5qyZRs9QOGVTio=";
@@ -10447,7 +10447,7 @@
       }
     ];
   };
-  Fabric-0-3-3-99 = {
+  "Fabric 0.3.3.99" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.3.99/fabric-loader-0.3.3.99.jar";
       sha256 = "sha256-+Ennj4N9jSwFomJrJ0dcTAxLm95GW0/asiWhR1oilPw=";
@@ -10493,7 +10493,7 @@
       }
     ];
   };
-  Fabric-0-3-3-98 = {
+  "Fabric 0.3.3.98" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.3.98/fabric-loader-0.3.3.98.jar";
       sha256 = "sha256-qi4ot3Zn+qtFzuo+w7Cjop062kJ1nt39NBrN8YvKVAc=";
@@ -10539,7 +10539,7 @@
       }
     ];
   };
-  Fabric-0-3-3-97 = {
+  "Fabric 0.3.3.97" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.3.97/fabric-loader-0.3.3.97.jar";
       sha256 = "sha256-u7TdGGyRjTFn0z/YRZ+9NELMuCafJ6NLFkKJRXChans=";
@@ -10585,7 +10585,7 @@
       }
     ];
   };
-  Fabric-0-3-2-96 = {
+  "Fabric 0.3.2.96" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.96/fabric-loader-0.3.2.96.jar";
       sha256 = "sha256-31boDy+rPjGbYz2Yb02rtsx7xuPbALbRpUOk1mQ2Gfs=";
@@ -10627,7 +10627,7 @@
       }
     ];
   };
-  Fabric-0-3-2-95 = {
+  "Fabric 0.3.2.95" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.95/fabric-loader-0.3.2.95.jar";
       sha256 = "sha256-6r/pbYY4T3enWDf1k5c7U6D2GwTWw8X41KSAB7VXlNc=";
@@ -10669,7 +10669,7 @@
       }
     ];
   };
-  Fabric-0-3-2-94 = {
+  "Fabric 0.3.2.94" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.94/fabric-loader-0.3.2.94.jar";
       sha256 = "sha256-EC+9yADiuLWzKnXmzY8wQ/EVpjNbgnPKAEl3opR8GRc=";
@@ -10711,7 +10711,7 @@
       }
     ];
   };
-  Fabric-0-3-2-93 = {
+  "Fabric 0.3.2.93" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.93/fabric-loader-0.3.2.93.jar";
       sha256 = "sha256-hdTuuupRVqSPA9ZJ1e18hKBCQ1RQmQZkTFvCY7/5RV0=";
@@ -10753,7 +10753,7 @@
       }
     ];
   };
-  Fabric-0-3-2-92 = {
+  "Fabric 0.3.2.92" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.92/fabric-loader-0.3.2.92.jar";
       sha256 = "sha256-u3Ia1pqu2UkfZ3atqDsCkrveyfyvvbB9g66epNIrreM=";
@@ -10795,7 +10795,7 @@
       }
     ];
   };
-  Fabric-0-3-2-91 = {
+  "Fabric 0.3.2.91" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.91/fabric-loader-0.3.2.91.jar";
       sha256 = "sha256-zfb5R7scn46nrFneoqkFkgPseUbh3Q63vwv4Yn0g4yo=";
@@ -10837,7 +10837,7 @@
       }
     ];
   };
-  Fabric-0-3-2-90 = {
+  "Fabric 0.3.2.90" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.90/fabric-loader-0.3.2.90.jar";
       sha256 = "sha256-HoI6HjY4xEABGw/K7JHqoq7bmteviPz61Fmm5aa9cKU=";
@@ -10879,7 +10879,7 @@
       }
     ];
   };
-  Fabric-0-3-2-87 = {
+  "Fabric 0.3.2.87" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.87/fabric-loader-0.3.2.87.jar";
       sha256 = "sha256-TeUDvgnn+aSmVk/vfOgCc6TlXWGgIqUb05IxhIoqCWY=";
@@ -10921,7 +10921,7 @@
       }
     ];
   };
-  Fabric-0-3-2-86 = {
+  "Fabric 0.3.2.86" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.2.86/fabric-loader-0.3.2.86.jar";
       sha256 = "sha256-OHyuhjk5bupYtc9dKG7TEiq7eoVoPPPmSXBHKyXJt/0=";
@@ -10963,7 +10963,7 @@
       }
     ];
   };
-  Fabric-0-3-1-85 = {
+  "Fabric 0.3.1.85" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.1.85/fabric-loader-0.3.1.85.jar";
       sha256 = "sha256-DJJ4suw/TwdbsbOzEB7yndAYBZUCwqcBMiaaCiFzyw8=";
@@ -11005,7 +11005,7 @@
       }
     ];
   };
-  Fabric-0-3-1-84 = {
+  "Fabric 0.3.1.84" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.1.84/fabric-loader-0.3.1.84.jar";
       sha256 = "sha256-Rq7jcf+n2KbvejL1bXa0FRGuPYmJJ4FgKyEv+nVoHow=";
@@ -11047,7 +11047,7 @@
       }
     ];
   };
-  Fabric-0-3-1-82 = {
+  "Fabric 0.3.1.82" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.1.82/fabric-loader-0.3.1.82.jar";
       sha256 = "sha256-T4CJDE4+xwv2/WG1yfit11bcJ5JtWdWy5aQg+awXfjY=";
@@ -11089,7 +11089,7 @@
       }
     ];
   };
-  Fabric-0-3-1-81 = {
+  "Fabric 0.3.1.81" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.1.81/fabric-loader-0.3.1.81.jar";
       sha256 = "sha256-+WRNovszp2FzP7eQ5I9FU4E23nxBSInJNT+9pw7ddeE=";
@@ -11131,7 +11131,7 @@
       }
     ];
   };
-  Fabric-0-3-1-80 = {
+  "Fabric 0.3.1.80" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.1.80/fabric-loader-0.3.1.80.jar";
       sha256 = "sha256-zJ4qerLgbfxiaJ4T9ayZGEaQoTpQOEsbqxZZsm9ccOs=";
@@ -11173,7 +11173,7 @@
       }
     ];
   };
-  Fabric-0-3-0-77 = {
+  "Fabric 0.3.0.77" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.0.77/fabric-loader-0.3.0.77.jar";
       sha256 = "sha256-Zy25SMdsIOVqhJwX2k49llKsomzMbRJiR4A9hU7lNw8=";
@@ -11215,7 +11215,7 @@
       }
     ];
   };
-  Fabric-0-3-0-76 = {
+  "Fabric 0.3.0.76" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.0.76/fabric-loader-0.3.0.76.jar";
       sha256 = "sha256-lCLSrrQgLXkvx77ViEESxQeV+ogKIeIUQWJ8SpImA38=";
@@ -11257,7 +11257,7 @@
       }
     ];
   };
-  Fabric-0-3-0-75 = {
+  "Fabric 0.3.0.75" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.0.75/fabric-loader-0.3.0.75.jar";
       sha256 = "sha256-aYlJpZOikwxm6EBl+IVI7cg4yAOPBt3dFbQhtljZG58=";
@@ -11299,7 +11299,7 @@
       }
     ];
   };
-  Fabric-0-3-0-74 = {
+  "Fabric 0.3.0.74" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.0.74/fabric-loader-0.3.0.74.jar";
       sha256 = "sha256-oNRiB+2GcyLPFclu4+UVupXiWBmOp76iUZ3Ew0mDxL4=";
@@ -11341,7 +11341,7 @@
       }
     ];
   };
-  Fabric-0-3-0-73 = {
+  "Fabric 0.3.0.73" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.0.73/fabric-loader-0.3.0.73.jar";
       sha256 = "sha256-DFp4NknAdjDG/WDWBnxKEUlZD7P71FX5t1wVXhe2t88=";
@@ -11383,7 +11383,7 @@
       }
     ];
   };
-  Fabric-0-3-0-72 = {
+  "Fabric 0.3.0.72" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.3.0.72/fabric-loader-0.3.0.72.jar";
       sha256 = "sha256-SuRxC4ZL0aCLEhDWxG8NqYsst7MmOJoLyiMlOIz1hV0=";
@@ -11425,7 +11425,7 @@
       }
     ];
   };
-  Fabric-0-2-0-71 = {
+  "Fabric 0.2.0.71" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.71/fabric-loader-0.2.0.71.jar";
       sha256 = "sha256-nY0nilRXxndNnoK7NYapRgHwuycGqwAz//z6PdMSHQE=";
@@ -11471,7 +11471,7 @@
       }
     ];
   };
-  Fabric-0-2-0-70 = {
+  "Fabric 0.2.0.70" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.70/fabric-loader-0.2.0.70.jar";
       sha256 = "sha256-1Ie5+wqF96HBWwSsYHVr1fzG15bHj6r0i8L4Q0nWBwE=";
@@ -11517,7 +11517,7 @@
       }
     ];
   };
-  Fabric-0-2-0-69 = {
+  "Fabric 0.2.0.69" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.69/fabric-loader-0.2.0.69.jar";
       sha256 = "sha256-T3N9EiqitAlFn2q3WaX8DnsgCEjlCfrWOsqJMLwwJLA=";
@@ -11563,7 +11563,7 @@
       }
     ];
   };
-  Fabric-0-2-0-68 = {
+  "Fabric 0.2.0.68" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.68/fabric-loader-0.2.0.68.jar";
       sha256 = "sha256-Hfl2i/0Tyd1A+nV0aA1IPeg+Eaeq7vj/GQSwws7cMBA=";
@@ -11609,7 +11609,7 @@
       }
     ];
   };
-  Fabric-0-2-0-67 = {
+  "Fabric 0.2.0.67" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.67/fabric-loader-0.2.0.67.jar";
       sha256 = "sha256-duGWI6hDmpDVcAzHAAtCNlSoETErAR4i7KspyUZnkOE=";
@@ -11651,7 +11651,7 @@
       }
     ];
   };
-  Fabric-0-2-0-66 = {
+  "Fabric 0.2.0.66" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.66/fabric-loader-0.2.0.66.jar";
       sha256 = "sha256-ejauMgW0QDQiG3rKVjXJgFHyl0n2d+oqMxPvleph4ds=";
@@ -11693,7 +11693,7 @@
       }
     ];
   };
-  Fabric-0-2-0-65 = {
+  "Fabric 0.2.0.65" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.65/fabric-loader-0.2.0.65.jar";
       sha256 = "sha256-2oQiV4/EBdvK6KW/l/c1RxL2e7zMcuo3iNZqY7wGOjU=";
@@ -11735,7 +11735,7 @@
       }
     ];
   };
-  Fabric-0-2-0-64 = {
+  "Fabric 0.2.0.64" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.64/fabric-loader-0.2.0.64.jar";
       sha256 = "sha256-7Fzfqqo87GSmNRc0OI3BSHSXHqzzTYHCEpM1ZG4F2dM=";
@@ -11777,7 +11777,7 @@
       }
     ];
   };
-  Fabric-0-2-0-63 = {
+  "Fabric 0.2.0.63" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.63/fabric-loader-0.2.0.63.jar";
       sha256 = "sha256-65hGpSdH8nA5nzA452zMu1PFy7t0VLx5Tu+E5z6ihDM=";
@@ -11819,7 +11819,7 @@
       }
     ];
   };
-  Fabric-0-2-0-62 = {
+  "Fabric 0.2.0.62" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.62/fabric-loader-0.2.0.62.jar";
       sha256 = "sha256-SCrduWcvUrzgBcYNgkibU7hA2md0oxy8J/NzQ18YvzY=";
@@ -11861,7 +11861,7 @@
       }
     ];
   };
-  Fabric-0-2-0-61 = {
+  "Fabric 0.2.0.61" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.61/fabric-loader-0.2.0.61.jar";
       sha256 = "sha256-UaUKNiUwrmff0Y+faRhHtGzqJYE7iM5Ww9yHcg49KGA=";
@@ -11903,7 +11903,7 @@
       }
     ];
   };
-  Fabric-0-2-0-60 = {
+  "Fabric 0.2.0.60" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.60/fabric-loader-0.2.0.60.jar";
       sha256 = "sha256-8Wu377HyFTZixNQIEnRCsX4kybnePJJ8yc3WzYb2hQw=";
@@ -11945,7 +11945,7 @@
       }
     ];
   };
-  Fabric-0-2-0-59 = {
+  "Fabric 0.2.0.59" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.59/fabric-loader-0.2.0.59.jar";
       sha256 = "sha256-KECnwF/0DbnBWzx8zm/9L8gWU71fuv1/1FHla1ftyVA=";
@@ -11987,7 +11987,7 @@
       }
     ];
   };
-  Fabric-0-2-0-58 = {
+  "Fabric 0.2.0.58" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.58/fabric-loader-0.2.0.58.jar";
       sha256 = "sha256-/w1MVEWeVhnyH/esnAJfjWLXbg7oMuChfs7aYG+awRc=";
@@ -12029,7 +12029,7 @@
       }
     ];
   };
-  Fabric-0-2-0-57 = {
+  "Fabric 0.2.0.57" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.57/fabric-loader-0.2.0.57.jar";
       sha256 = "sha256-E4nIIkj1oY/UKX6BskUuHAo+/IH9708FezUq1QbwluY=";
@@ -12071,7 +12071,7 @@
       }
     ];
   };
-  Fabric-0-2-0-56 = {
+  "Fabric 0.2.0.56" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.56/fabric-loader-0.2.0.56.jar";
       sha256 = "sha256-WyHlSfggT33PcuPadq7trIqK/WqoutdhXMM6GG8jPvk=";
@@ -12113,7 +12113,7 @@
       }
     ];
   };
-  Fabric-0-2-0-55 = {
+  "Fabric 0.2.0.55" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.55/fabric-loader-0.2.0.55.jar";
       sha256 = "sha256-YuRoRqbGTfpymTimiBapFSD9isCCW4NF+cz54oY26yY=";
@@ -12155,7 +12155,7 @@
       }
     ];
   };
-  Fabric-0-2-0-54 = {
+  "Fabric 0.2.0.54" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.54/fabric-loader-0.2.0.54.jar";
       sha256 = "sha256-qYRK/XfCnec5UnRueGEYxoJiuVPwtemqHPdefQWXnws=";
@@ -12197,7 +12197,7 @@
       }
     ];
   };
-  Fabric-0-2-0-53 = {
+  "Fabric 0.2.0.53" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.2.0.53/fabric-loader-0.2.0.53.jar";
       sha256 = "sha256-fTBJpbfTSdTApQQVmTbqnI1V4Ypc023k1jv/olzbopE=";
@@ -12239,7 +12239,7 @@
       }
     ];
   };
-  Fabric-0-1-0-52 = {
+  "Fabric 0.1.0.52" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.1.0.52/fabric-loader-0.1.0.52.jar";
       sha256 = "sha256-ZoHh9A9Vn0JnyezzoFxfN5MuphhtkrY3kiTkd2IGe34=";
@@ -12285,7 +12285,7 @@
       }
     ];
   };
-  Fabric-0-1-0-51 = {
+  "Fabric 0.1.0.51" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.1.0.51/fabric-loader-0.1.0.51.jar";
       sha256 = "sha256-5wH8co0CaP8JAq7H5xWiC1XBYwLp7kgmrwABF/z+YYI=";
@@ -12331,7 +12331,7 @@
       }
     ];
   };
-  Fabric-0-1-0-50 = {
+  "Fabric 0.1.0.50" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.1.0.50/fabric-loader-0.1.0.50.jar";
       sha256 = "sha256-HG8bl/gJqU5wrSur9SDV5o0VjDs7F2uZ8pLhnUxcbGY=";
@@ -12377,7 +12377,7 @@
       }
     ];
   };
-  Fabric-0-1-0-49 = {
+  "Fabric 0.1.0.49" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.1.0.49/fabric-loader-0.1.0.49.jar";
       sha256 = "sha256-VFPFo6o+8AlsiEMGUuard8J6x9S1IDB0JaZi3HWeUa4=";
@@ -12423,7 +12423,7 @@
       }
     ];
   };
-  Fabric-0-1-0-48 = {
+  "Fabric 0.1.0.48" = {
     loader = {
       url = "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.1.0.48/fabric-loader-0.1.0.48.jar";
       sha256 = "sha256-PlA0nWIX4i5qM1rAIR5ia7EMWRoPbdCtqgeo5A6s0O0=";

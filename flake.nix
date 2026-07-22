@@ -9,10 +9,44 @@
     self,
     nixpkgs,
   }: let
-    minecraftVersion = "Minecraft-1-21-11";
+    minecraftVersion = "Minecraft 1.21.11";
     configName = "testing";
     gameConfig = {
-      fabricLoaderVersion = "Fabric-0-19-3";
+      fabricLoaderVersion = "Fabric 0.19.3";
+
+      mods = [
+        "sodium"
+        "sodium-extra"
+        "lithium"
+        "malilib"
+        "tweakeroo"
+        "litematica"
+        "minihud"
+        "item-scroller"
+        "servux"
+        "fabric-api"
+        "appleskin"
+        "continuity"
+        "distanthorizons"
+        "lambdynamiclights"
+        "modmenu"
+        "ambientsounds"
+        "no-chat-reports"
+        "reeses-sodium-options"
+        "xaeros-world-map"
+        "ferrite-core"
+        "creativecore"
+        "immediatelyfast"
+        "calcmod"
+        "cull-leaves"
+        "krypton"
+        "carpet"
+        "carpet-extra"
+        "sound-physics-remastered"
+        "entityculling"
+        "3dskinlayers"
+        # "simple-voice-chat"
+      ];
 
       launchConfig = {
         ramMin = "2G";

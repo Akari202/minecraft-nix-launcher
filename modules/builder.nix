@@ -58,6 +58,7 @@
       then
         (map fetchSource fabricLoaderData.commonLibraries)
         ++ [(fetchSource fabricLoaderData.loader)]
+        ++ [(fetchSource versionData.fabricIntermediary)]
       else []
     );
 
@@ -96,6 +97,8 @@
   pythonEnv = pkgs.python3.withPackages (ps: [
     ps.aiohttp
   ]);
+
+  resolvedMods = import ./mods.nix {inherit pkgs minecraftVersion gameConfig;};
 in {
   default = pkgs.writeShellApplication {
     name = "minecraft";
@@ -110,6 +113,13 @@ in {
       MODS_DIR="$GAME_DIR/mods"
       LOGS_DIR="$GAME_DIR/logs"
       mkdir -p "$GAME_DIR" "$MODS_DIR" "$LOGS_DIR" "$GAME_DIR/assets" "$GAME_DIR/assets/indexes" "$GAME_DIR/assets/objects"
+      cd "$GAME_DIR"
+
+      rm -f "$MODS_DIR"/*.jar
+      ${nixpkgs.lib.concatMapStringsSep "\n" (modPath: ''
+          ln -sf "${modPath}" "$MODS_DIR/${builtins.baseNameOf modPath}"
+        '')
+        resolvedMods}
 
       ASSET_ID="${versionData.assetIndex.id}"
       INDEX_LINK_PATH="$GAME_DIR/assets/indexes/$ASSET_ID.json"
@@ -165,8 +175,15 @@ in {
     runtimeInputs = [javaRuntime];
     text = ''
       SERVER_DIR="''${SERVER_DIR:-$HOME/.minecraft-nix-servers/${configName}}"
-      mkdir -p "$SERVER_DIR"
+      MODS_DIR="$SERVER_DIR/mods"
+      mkdir -p "$SERVER_DIR" "$MODS_DIR"
       cd "$SERVER_DIR"
+
+      rm -f "$MODS_DIR"/*.jar
+      ${nixpkgs.lib.concatMapStringsSep "\n" (modPath: ''
+          ln -sf "${modPath}" "$MODS_DIR/${builtins.baseNameOf modPath}"
+        '')
+        resolvedMods}
 
       cp -f "${serverPropertiesFile}" server.properties
       cp -f "${serverLists.opsFile}" ops.json

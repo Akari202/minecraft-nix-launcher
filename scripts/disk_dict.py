@@ -23,16 +23,16 @@ class DiskDict(dict):
 
     def save(self):
         if not self._dirty:
-            debug(f"Skipping write, no changes detected for {self.filename}")
+            print(f"Skipping write, no changes detected for {self.filename}")
             return
 
         try:
             with open(self.filename, "w") as file:
                 json.dump(self, file, indent=4)
             self._dirty = False
-            debug(f"Successfully written {self.filename}")
+            print(f"Successfully written {self.filename}")
         except IOError as e:
-            error(f"Failed to write {self.filename}: {e}")
+            print(f"Failed to write {self.filename}: {e}")
 
     def __setitem__(self, key, value):
         if key not in self or super().__getitem__(key) != value:
