@@ -57,12 +57,12 @@ class Mod:
 }};'''
 
     @classmethod
-    def from_name(cls, name: str) -> Self:
+    def from_name(cls, name: str, version_limit: int) -> Self:
         info(f"Fetching mod versions of {name}")
         data = get_fabric_mod_versions(name)
         recent_data = sorted(
             data, key=lambda x: x.get("date_published", ""), reverse=True
-        )[:500]
+        )[:version_limit]
         return cls(
             name=name,
             versions=[
@@ -91,5 +91,7 @@ class ModrinthMods:
 }}'''
 
     @classmethod
-    def from_name_list(cls, names: list[str]) -> Self:
-        return cls(mods=[Mod.from_name(i) for i in names])
+    def from_name_list(cls, names: list[str], version_limit: int) -> Self:
+        return cls(
+            mods=[Mod.from_name(name=i, version_limit=version_limit) for i in names]
+        )

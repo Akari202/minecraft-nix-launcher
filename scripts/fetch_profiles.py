@@ -15,10 +15,10 @@ from fabric_data import Fabric
 from minecraft_data import Minecraft
 from mod_data import ModrinthMods
 from output_file import OutputFile
-from util import json_cache
+from util import json_cache, modrinth_json_cache
 
-# json_cache.pop("https://piston-meta.mojang.com/mc/game/version_manifest_v2.json")
-# json_cache.pop("https://meta.fabricmc.net/v2/versions/loader/26.2")
+json_cache.pop("https://piston-meta.mojang.com/mc/game/version_manifest_v2.json")
+json_cache.pop("https://meta.fabricmc.net/v2/versions/loader/26.2")
 # modrinth_json_cache.clear()
 
 info("Parsing Minecraft manifest")
@@ -67,9 +67,19 @@ included_mods = set(
         "immediatelyfast",
         "calcmod",
         "cull-leaves",
+        "syncmatica",
+        "logical-zoom",
+        "flashback",
+        "betterf3",
+        "fabric-language-kotlin",
+        "c2me-fabric",
+        "scalablelux",
+        "presence-footsteps",
+        "simplevoicechat-broadcast",
+        "xaeros-minimap",
     ]
 )
-modrinth_mods = ModrinthMods.from_name_list(included_mods)
+modrinth_mods = ModrinthMods.from_name_list(names=included_mods, version_limit=500)
 info("Writing mod versions")
 OutputFile("pkgs/modrinth-versions-new.nix").write_chunk(str(modrinth_mods))
 

@@ -17,10 +17,10 @@ pkgs.writeShellApplication {
 
   runtimeInputs = [
     javaRuntime
-    pkgs.python3.withPackages
-    (ps: [
-      ps.aiohttp
-    ])
+    (pkgs.python3.withPackages
+      (ps: [
+        ps.aiohttp
+      ]))
   ];
 
   text = ''
